@@ -1,0 +1,47 @@
+
+			#bs-example-navbar-collapse-1 {
+				display:inline-block !important;
+				
+			}
+.banner {
+		background: #000;
+	    display: block;
+			a.brand {
+			    color:#fff;
+			    display: inline-block;
+			    font-size: 2em;
+			    margin-top:0.3em;
+			    padding:1.4em;
+			    overflow:hidden;
+			    font-weight: bold;
+			}
+			nav {
+				display:inline-block;
+					li {
+			    display: inline-block;
+			    float: none;
+							a {
+					    padding: 1.2em;
+					    color:#fff;
+					    display: inline-block;
+					    font-size: 2em;
+					    overflow: hidden;
+					    	
+					    &:hover {
+					    	color:#000;
+					    }
+					}
+					 .dropdown-menu {
+						    	
+						    	font-size:1em;
+						    	background: #000;
+						    	min-width:auto;
+						    	 a:hover {
+								    	background:transparent;
+								    	color:$color1;
+								    	min-width:auto;
+								    }
+					    }
+			}
+	}
+}
