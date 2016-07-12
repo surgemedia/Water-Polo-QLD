@@ -27,7 +27,7 @@ function get_component($files = Array()){
 			ob_start(); //start object buffer 
 			$component = include(locate_template($compDir.$files['template'].'.php')); //instead of echoing it, its stored 
 			if($component == false){
-				echo 'Can not find file '.$files['template'].' in dir '.$compDir;
+				echo '<div class="alert alert-warning" role="alert">Can not find the file '.$files['template'].' in folder '.$compDir.'</div>';
 			}
 			$component = ob_get_clean(); //set var to the stored buffer ( i believe this flats the vars)
 			/*=================================================

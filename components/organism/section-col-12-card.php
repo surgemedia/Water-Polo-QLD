@@ -17,15 +17,7 @@
 														"image" => $vars['image'],
 														"image_position" => $vars['image_position'],
 
-															"button" => get_component([
-																'template' => 'atom/link',
-																'return_string' => true,
-																'vars' => [
-																			"class" => 'btn text-uppercase pull-left',
-																			"text" => $vars['button'][0]['text'],
-																			"url" => $vars['button'][0]['link_location'],
-																			]
-																])
+															"button" => $vars['button']
 														]
 											 ]);
 

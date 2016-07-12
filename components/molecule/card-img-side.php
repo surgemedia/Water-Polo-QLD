@@ -1,5 +1,5 @@
 <?php
-//	debug($vars);
+	//debug($vars);
 
 
  if($vars['image_position'] == 'Right Side'){ 
@@ -17,22 +17,18 @@
 		<h1><?php echo $vars["title"]?></h1>
 	</hgroup>
 	<?php echo apply_filters('the_content',  $vars["content"]); ?>
-		<?php if(is_array($vars['button']) == 1){ ?>
-		<?php if(isset($vars['button'][0]['text']) != 0){ 
-				get_component([
-								'template' => 'atom/link',
-								'vars' => [
-									"class" => 'btn text-uppercase',
-									"text" => $vars['button'][0]['text'],
-									"link" => $vars['button'][0]['link'],
-									]
-				]);
-				 }
-																 ?>
-		<?php } else { ?>
-		<?php echo $vars['button']; ?>
-		<?php } ?>
+			<?php 
+		if(isset($vars["button"])){
+			get_component([
+								'template' => 'atom/button-list',
+								'vars' => $vars['button']	
+								]);
+		};
+		?>
+
 </article>
 <div class="col-md-6 <?php echo $vars['img_class'] ?> text-center">
-		<img class="img-responsive rounded" src="<?php echo $vars['image'] ?>" alt="">
+<?php if(true == is_numeric($vars['image'])){  echo wp_get_attachment_image( $vars['image'], 'full', "", array( "class" => "img-responsive" ) );  } else { ?>
+		<img class="img-responsive" src="<?php echo $vars['image'] ?>" alt="">
+		<?php } ?>
 </div>

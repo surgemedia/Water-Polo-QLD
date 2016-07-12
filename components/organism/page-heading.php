@@ -1,5 +1,4 @@
-<section class="page-heading <?php echo $vars['class'] ?>">
-	<img class="top-banner" src="<?php echo $vars["image"]; ?>" alt="">
+<section class="page-heading <?php echo $vars['class'] ?>" style="background-image:url(<?php echo $vars["background"]; ?>)">
 
 	<?php
 			/*=============================================
@@ -7,28 +6,27 @@
 			= @components
 				+ molecule/card-header
 			=============================================*/
-			$button_array = "";
-			if(in_array("button", $vars['option'])){
-				$button_array = get_component([
-																'template' => 'atom/link',
-																'return_string' => true,
-																'vars' => [
-																			"class" => 'btn text-uppercase pull-left',
-																			"text" => $vars['button'][0]['text'],
-																			"url" => $vars['button'][0]['link_location'],
-																			'toggle' => ''
-																			]
-																]);
+			// if(is_array($vars['button'])){
+			// 	$vars['button_array'] = get_component([
+			// 													'template' => 'atom/link',
+			// 													'return_string' => true,
+			// 													'vars' => [
+			// 																"class" => 'btn text-uppercase pull-left',
+			// 																"text" => $vars['button'][0]['text'],
+			// 																"link" => $vars['button'][0]['link'],
+			// 																'toggle' => ''
+			// 																]
+			// 													]);
 														
-			}
+			// }
 			get_component([ 'template' => 'molecule/card',
-											'remove_tags' =>  ['img'],
 											'vars' => [
 														"class" => 'card container padding-4',
 														"subtitle" => $vars["subtitle"],
 														"title" => $vars["title"],
+														"image" => $vars["image"],
 														"content" => apply_filters('the_content',  $vars["content"]),
-														"button" => $button_array
+														"button" => $vars['button']
 														]
 											 ]);
 	 ?>

@@ -20,7 +20,8 @@ if (is_front_page()){ ?>
 														"title" => get_field('title'),
 														"subtitle" => get_field('subtitle'),
 														"content" => get_field('content'),
-														"image" => get_field('background'),
+														"background" => get_field('background'),
+														"image" => get_field('image'),
 														"button" => get_field('button'),
 
 														]
@@ -30,7 +31,8 @@ if (is_front_page()){ ?>
 <div class="row">
 <?php
 $layout_builder = get_field('layout');
-
+//is there block?
+if(isset($layout_builder[0])){
 foreach ($layout_builder as $key => $value) {
 	$section_file = $value['acf_fc_layout'];
 	if(isset($section_file)){
@@ -51,5 +53,12 @@ foreach ($layout_builder as $key => $value) {
 				
 				}
 		unset($section_file);
-} ?>
+	}
+} else {
+	get_component([
+						'template' => 'template/no-section-warning',
+						'vars' => []
+			]);
+}
+ ?>
 </div>
