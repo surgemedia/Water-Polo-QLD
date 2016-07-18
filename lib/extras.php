@@ -33,6 +33,18 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 
+
+/*=========================================
+=            CUSTOM POST TYPES            =
+=========================================*/
+  $cpt_enabled = [
+            'events' => true,
+            'testimonials' => false,
+            'representative_teams' => true,
+            'clubs' => true,
+
+  ];
+
 /*======================================
 =            EXTRA FUCTIONS            =
 ======================================*/
@@ -55,8 +67,9 @@ $custom_includes = [
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
   'lib/function-truncate-content.php',    // Scripts and stylesheets
   'lib/custom_post_type_class.php',    // Create Custom Post Types
+  'lib/post-types.php',    // Create Custom Post Types
   'lib/supports.php',    // Create Custom Post Types
-  'lib/class-layoutbuilder.php',    // Create Custom Post Types
+  // 'lib/class-layoutbuilder.php',    // Create Custom Post Types
   'lib/create-home-page.php',    // Create Custom Post Types
   'lib/function-get_section_options.php',    // Scripts and stylesheets
 ];
@@ -69,6 +82,8 @@ foreach ($custom_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
 
 
 

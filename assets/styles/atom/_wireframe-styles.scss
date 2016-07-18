@@ -62,4 +62,11 @@ section {
 			    		}
 			}
 		}
+		&.oembed{
+			iframe,twitterwidget {
+				min-height: 340px;
+		    min-width: 100% !important;
+		    max-width: 100% !important;
+			}
+		}
 }

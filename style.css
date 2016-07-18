@@ -10,3 +10,19 @@ Text Domain:        sage
 License:            MIT License
 License URI:        http://opensource.org/licenses/MIT
 */
+
+a.acf-icon.-minus.small {
+    content: "DELETE";
+    width: auto;
+    border-radius: 0px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 5em;
+}
+
+a.acf-icon.-minus.small:before {
+    content: "DELETE";
+    width: auto;
+    height: auto;
+    font-family: inherit;
+}

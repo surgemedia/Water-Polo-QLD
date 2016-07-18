@@ -36,6 +36,10 @@
 						    	font-size:1em;
 						    	background: #000;
 						    	min-width:auto;
+						    	li { 
+						    		width:100%;
+						    		clear:both;
+						    	}
 						    	 a:hover {
 								    	background:transparent;
 								    	color:$color1;
