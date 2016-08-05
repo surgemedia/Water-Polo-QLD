@@ -1,0 +1,27 @@
+.banner {
+  a.brand {}
+  #logowrapper {
+    text-align:left;
+    width:auto;
+    img {
+      height: 100%;
+      width:auto;
+
+    }
+  }
+  nav {
+    li {
+      a {
+        &:hover {}
+      }
+      .dropdown-menu {
+        li {}
+        a:hover {}
+      }
+    }
+  }
+}
+
+#loginPopup {}
+
+#shopPopup {}

@@ -37,9 +37,9 @@ foreach ($layout_builder as $key => $value) {
 	$section_file = $value['acf_fc_layout'];
 	if(isset($section_file)){
 	unset($value['acf_fc_layout']); //of section
-	
 	//Section Options
 	$value['section_data'] = get_section_options($value);
+
 	$value['section_classes'] = 'class="'.$section_file.' '.$value['section_data']['border'].' '.$value['section_data']['background_color'].' '.$value['section_data']['section_width'].' '.$value['section_data']['padding'].' '.$value['section_data']['margin'].' '.$value['section_data']['text_align'].'"';
 	$value['section_id'] = 'id="'.$value['section_data']['id'].'"';
 	$value['section_style'] = 'style="background-image:url('.$value['section_data']['background_image'].');"';

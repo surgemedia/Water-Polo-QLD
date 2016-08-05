@@ -1,5 +1,5 @@
 <article class="<?php echo $vars['class'] ?>  molecule card">
-
+<div class="wrapper">
 <?php if(isset($vars["image"]) && strlen($vars["image"]) > 0) { ?>
 	<img class="img-responsive" src="<?php echo $vars["image"]?>" alt=""></img>
 	<?php } ?>
@@ -21,4 +21,5 @@
 								]);
 		};
 		?>
+
 </article>

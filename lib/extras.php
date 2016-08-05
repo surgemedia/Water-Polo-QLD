@@ -69,7 +69,7 @@ $custom_includes = [
   'lib/custom_post_type_class.php',    // Create Custom Post Types
   'lib/post-types.php',    // Create Custom Post Types
   'lib/supports.php',    // Create Custom Post Types
-  // 'lib/class-layoutbuilder.php',    // Create Custom Post Types
+  'lib/function-getYoutubeId.php',
   'lib/create-home-page.php',    // Create Custom Post Types
   'lib/function-get_section_options.php',    // Scripts and stylesheets
 ];

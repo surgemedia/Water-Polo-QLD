@@ -101,4 +101,8 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
+$('.oembed .placeholder.video').on('click', function(event) {
+      $(this).addClass('playing');
+}); 
+
 })(jQuery); // Fully reference jQuery after this point.

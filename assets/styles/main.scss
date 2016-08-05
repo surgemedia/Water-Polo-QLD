@@ -11,7 +11,9 @@
 ============================*/
 @import "atom/fonts";
 @import "atom/global";
-@import "atom/wireframe-styles";
+@import "mixin/tri";
+
+// @import "atom/wireframe-styles";
 
 
 /*================================
@@ -20,13 +22,41 @@
 @import "molecule/buttons";
 @import "molecule/comments";
 @import "molecule/forms";
-@import "molecule/grid";
-@import "molecule/wp-classes";
+@import 'molecule/calendar';
+@import 'molecule/card';
+@import 'molecule/card-img-side';
+@import 'molecule/image';
+@import 'molecule/image-grid';
+@import 'molecule/img-text';
+@import 'molecule/list';
+@import 'molecule/map';
+@import 'molecule/oembed';
+@import 'molecule/page-header';
+@import 'molecule/related-items';
+@import 'molecule/slider';
+@import 'molecule/tabs';
 
 /*================================
 =            Organism            =
 ================================*/
-@import "organism/paragraph-overlay";
+@import 'organism/big-column-small-column';
+@import 'organism/card';
+@import 'organism/angled-card';
+
+@import 'organism/comments';
+@import 'organism/contact';
+@import 'organism/floating';
+@import 'organism/four-columns';
+@import 'organism/homepage-heading';
+@import 'organism/image-grid';
+@import 'organism/one-column';
+@import 'organism/page-heading';
+@import 'organism/related-items';
+@import 'organism/sidebar';
+@import 'organism/slider';
+@import 'organism/small-column-big-column';
+@import 'organism/three-columns';
+@import 'organism/two-columns';
 
 /*=================================
 =            Templates            =
@@ -57,9 +87,7 @@
 	@import "res/_res-md.scss";
 }
 /* Portrait */
-@media 
-  (max-device-width: 800px) 
-  and (orientation: portrait) { 
+@media (max-device-width: 800px)  and (orientation: portrait) { 
 	//@import "res/_res-800-portrait.scss";
 }
 @media (min-width: $screen-lg-min) {

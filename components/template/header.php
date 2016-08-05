@@ -1,70 +1,50 @@
 <header class="banner hide-print">
-          <ul class="list-inline pull-right">
-          <?php 
-          $social_repeater = get_field('contact_details', 'option');
-          for ($social_i=0; $social_i < sizeof($social_repeater); $social_i++) { ?>
-            <li>
-                <a href='<?php echo $social_repeater[$social_i]['clickable_text']; ?>'>
-                    <i class="<?php echo $social_repeater[$social_i]['label'] ?>">
-                    <?php echo $social_repeater[$social_i]['text'] ?>
-                    </i>
-                </a>
-            </li>
-         <?php } ?>
-    </ul>
-
-
- <div id="socialbar" class="col-md-12">
-        <div class="phone">
-           <i class="icon-telephone">
-                    </i>
-                    <a href="tel:<?php echo get_field('phone', 'option');?> ">
-                      <?php echo get_field('phone', 'option');?>
-                    </a>
-        </div>
-        </div>
-
-<div class="container-fluid">
-  <div class="col-md-3">
+  <div id="logowrapper" class="col-md-1 col-xs-12 text-center red-dark-bg padding-4">
     <?php 
       get_component([
-            'template' => 'atom/brand',
-            'vars' => [
-                        'logo' => get_field('logo','option')
-                      ]
-      ]);
+              'template' => 'atom/brand',
+              'vars' => [
+                          'logo' => get_field('logo','option'),
+                          'width' => '100%',
+                          'height' => 'auto',
+                        ]
+        ]);
       ?>
       </div>
-   
-    
-    <div class="col-md-3 pull-right  ">
-      <?php dynamic_sidebar('top-nav'); ?>
-    </div>
-    <div id="myaccount" class="col-md-3 pull-right ">
-      <?php
-        if (has_nav_menu('account_menu')) :
-           wp_nav_menu(['theme_location' => 'account_menu', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav ']);
-        endif;
-      ?>
-        </div>
-    </div>
-    <div id="navbar" class="container-fluid gradient-bg">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <div id="navbar" class="">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <nav class="nav-primary">
+      </button>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
+      <nav class="nav-primary col-md-11 col-sm-11 grey-bg col-md-offset-1">
        <?php
         if (has_nav_menu('primary_navigation')) :
            wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav ']);
         endif;
       ?>
       
-      </nav>
-    </div>
       
-  </div>
+   <div id="loginPopup" class=" red-dark-bg padding-2">
+     <a href="#">Sign In</a>
+   </div>
+      </nav>
+    <nav class="col-md-11 col-xs-12 text-center nav-secondary teal-bg col-md-offset-1">
+      <?php
+        if (has_nav_menu('secondary_navigation')) :
+           wp_nav_menu(['theme_location' => 'secondary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav ']);
+        endif;
+      ?>
+    <div id="shopPopup" class=" white-bg padding-2">
+       <a href=""> <i class="icon-shopping-cart"></i></a>
+      </div>
+        </nav>
+    </div>
+    </div>
+</div>
+
+
+
 </header>
