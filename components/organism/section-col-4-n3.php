@@ -1,4 +1,3 @@
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
 <?php
 	/*=====================================
 	=            Get Files            =
@@ -68,4 +67,3 @@
 
 
  ?>
-</section>

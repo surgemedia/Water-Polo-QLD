@@ -3,7 +3,7 @@
 				display:inline-block !important;
 				padding:0px;
 				width:100%;
-				
+
 			}
 .banner {
 		background: $teal;
@@ -17,7 +17,7 @@
 			    padding:4em 1.4em;
 			    overflow:hidden;
 			    font-weight: bold;
-			    
+
 
 			}
 			#logowrapper {
@@ -42,26 +42,43 @@
 					    color: #fff;
 					    display: inline-block;
 					    font-size: 1.5em;
-					    overflow: hidden;
 					    font-weight: bold;
 					    text-transform: uppercase;
-					    	
+							position: relative;
 					    &:hover {
-					    	color:#000;
+					    	color:#fff;
+								background-color: transparent;
+								&:after {
+									height:5px;
+									background-color:#fff;
+									width:100%;
+									bottom:0px;
+									left:0px;
+									position:absolute;
+									content:"";
+								}
 					    }
 					}
+					.nav .open>a {
+							background-color:$red-dark;
+					}
 					 .dropdown-menu {
-						    	
+						 			padding:0px;
+									margin:0px;
 						    	font-size:1em;
-						    	background: #000;
+						    	background: transparent;
 						    	min-width:auto;
-						    	li { 
+
+						    	li {
 						    		width:100%;
 						    		clear:both;
 						    	}
+									a {
+											background:$grey-dark;
+									}
 						    	 a:hover {
-								    	background:transparent;
-								    	color:$color1;
+								    	background:$red-dark;
+								    	color:#fff;
 								    	min-width:auto;
 								    }
 					    }

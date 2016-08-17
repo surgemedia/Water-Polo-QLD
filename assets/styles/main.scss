@@ -35,6 +35,9 @@
 @import 'molecule/related-items';
 @import 'molecule/slider';
 @import 'molecule/tabs';
+@import 'molecule/social-feed';
+@import 'molecule/events';
+
 
 /*================================
 =            Organism            =
@@ -57,6 +60,8 @@
 @import 'organism/small-column-big-column';
 @import 'organism/three-columns';
 @import 'organism/two-columns';
+@import 'organism/media-block';
+
 
 /*=================================
 =            Templates            =
@@ -67,6 +72,8 @@
 @import "template/pages";
 @import "template/posts";
 @import "template/tinymce";
+@import "template/woocommerce";
+
 
 /*----------  RESPONSIVE  ----------*/
 
@@ -87,7 +94,7 @@
 	@import "res/_res-md.scss";
 }
 /* Portrait */
-@media (max-device-width: 800px)  and (orientation: portrait) { 
+@media (max-device-width: 800px)  and (orientation: portrait) {
 	//@import "res/_res-800-portrait.scss";
 }
 @media (min-width: $screen-lg-min) {

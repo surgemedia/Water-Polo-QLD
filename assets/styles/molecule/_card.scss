@@ -1,0 +1,71 @@
+.card.molecule {
+
+	//core styles
+		.wrapper {
+			margin:0px;
+			padding:4em 0em;
+		}
+		img { }
+		hgroup { }
+		h1 { }
+		h6 { }
+
+
+	//color varities
+		&.white-bg { .btn { }}
+		&.red-dark-bg { .btn { }}
+		&.red-bg { .btn { }}
+		&.grey-light-bg { .btn { }}
+		&.grey-bg { .btn { }}
+		&.blue-bg { .btn {background-color:$blue;}}
+		&.teal-bg {}
+
+	//aditional
+	&.style1 {
+		.wrapper{
+			padding:2em;
+		}
+
+			img { }
+		hgroup { }
+			h1 { font-size: 4em; padding:1em; }
+			h6 { }
+	}
+	&.style2 {
+			img { }
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.style3 {
+			img { }
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.product {
+		.wrapper {
+			padding-top: 0px;
+		}
+		h1 {
+			@extend .h2;
+			margin-top: 0px;
+		}
+	}
+	&.club {
+		text-align: center;
+		.wrapper {
+			padding-top:3em;
+		}
+		 h1 { @extend .h2; margin-bottom: 1em;}
+		 p { font-size:1.6em;
+			 margin-bottom: 0.3em;
+		 }
+		 &.grey-light-bg {
+			 color:#000;
+			 h1,p {
+				 color:#000;
+			 }
+		 }
+	}
+}

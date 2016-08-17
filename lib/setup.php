@@ -28,7 +28,8 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
-    'secondary_navigation' => __('Secondary Navigation', 'sage')
+    'secondary_navigation' => __('Secondary Navigation', 'sage'),
+    'footer_navigation' => __('Footer', 'sage')
 
   ]);
 
@@ -105,7 +106,7 @@ function assets() {
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
-// wp_enqueue_scripts( 'wl-googlemaps-api', '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true); 
+// wp_enqueue_scripts( 'wl-googlemaps-api', '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true);
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }

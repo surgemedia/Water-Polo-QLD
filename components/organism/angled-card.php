@@ -1,7 +1,10 @@
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
-
 <?php
-
+		// debug($vars);
+			/*=============================================
+			= Card (Class,Image,Title,Content)
+			= @components
+				+ molecule/card-img-side
+			=============================================*/
 			get_component([ 'template' => 'molecule/image',
 												'vars' => [
 															"class" => 'col-md-2 pull-left',
@@ -28,11 +31,8 @@
 														"button" => $vars['button']
 														]
 											 ]);
-
-			
 ?>
 <?php
-
 			get_component([ 'template' => 'molecule/image',
 												'vars' => [
 															"class" => 'col-md-2 pull-right',
@@ -41,4 +41,3 @@
 												]
 											 ]);
 ?>
-</section>

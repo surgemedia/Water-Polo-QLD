@@ -3,7 +3,6 @@
 	}
 	?>
 
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
 <div class="container">
 	<div class="col-md-6 pull-right">
 		<div class="box">
@@ -28,4 +27,3 @@
 		</div>
 		</div>
 	</div>
-</section>

@@ -1,7 +1,7 @@
 
 <?php
 if (is_front_page()){ ?>
-<?php 
+<?php
 	get_component([ 'template' => 'organism/homepage-heading',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
@@ -12,7 +12,7 @@ if (is_front_page()){ ?>
 											 ]);
  ?>
 <?php }else{ ?>
-<?php 
+<?php
 	get_component([ 'template' => 'organism/page-heading',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
@@ -28,7 +28,7 @@ if (is_front_page()){ ?>
 											 ]);
  ?>
 <?php } ?>
-<div class="row">
+<div class="">
 <?php
 $layout_builder = get_field('layout');
 //is there block?
@@ -38,27 +38,32 @@ foreach ($layout_builder as $key => $value) {
 	if(isset($section_file)){
 	unset($value['acf_fc_layout']); //of section
 	//Section Options
+	$value["section"] = $section_file;
 	$value['section_data'] = get_section_options($value);
-
-	$value['section_classes'] = 'class="'.$section_file.' '.$value['section_data']['border'].' '.$value['section_data']['background_color'].' '.$value['section_data']['section_width'].' '.$value['section_data']['padding'].' '.$value['section_data']['margin'].' '.$value['section_data']['text_align'].'"';
-	$value['section_id'] = 'id="'.$value['section_data']['id'].'"';
-	$value['section_style'] = 'style="background-image:url('.$value['section_data']['background_image'].');"';
-
-
 	//Call file for display
+	echo '<section '.$value['section_data'].'>';
 			get_component([
 						'template' => 'organism/'.$section_file,
 						'vars' => $value
 			]);
-				
+
 				}
+		echo '</section>';
+
 		unset($section_file);
 	}
 } else {
+	if(is_cart() OR is_woocommerce() OR is_checkout()) {
+		get_component([
+						'template' => 'template/simple-page',
+						'vars' => []
+			]);
+	} else {
 	get_component([
 						'template' => 'template/no-section-warning',
 						'vars' => []
 			]);
+	}
 }
  ?>
 </div>

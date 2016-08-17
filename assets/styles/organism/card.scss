@@ -1,28 +1,43 @@
 .card {
-//core styles
-	img { } 
-	hgroup { }
+
+	//core styles
+		.wrapper {
+			margin:0px;
+			// padding:0px;
+		}
+		img { } 
+		hgroup { }
 		h1 { }
 		h6 { }
 
-//aditional
-&.style1 {
-		img { } 
-	hgroup { }
-		h1 { }
-		h6 { }
-}
-&.style2 {
-		img { } 
-	hgroup { }
-		h1 { }
-		h6 { }
-}
-&.style3 {
-		img { } 
-	hgroup { }
-		h1 { }
-		h6 { }
-}
+
+	//color varities
+		.white-bg {}
+		.red-dark-bg {}
+		.red-bg {}
+		.grey-light-bg {}
+		.grey-bg {}
+		.blue-bg {}
+		.teal-bg {}
+
+	//aditional
+	&.style1 {
+			img { } 
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.style2 {
+			img { } 
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.style3 {
+			img { } 
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
 
 }	

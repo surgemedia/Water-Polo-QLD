@@ -12,9 +12,26 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header('shop'); ?>
+<?php
+	$ShopPageId = get_option( 'woocommerce_shop_page_id' );
+	get_component([ 'template' => 'organism/page-heading',
+											'remove_tags'=> get_field('remove_elements'),
+											'vars' => [
+														"class" => '',
+														"title" => get_field('title',$ShopPageId),
+														"subtitle" => get_field('subtitle',$ShopPageId),
+														"content" => get_field('content',$ShopPageId),
+														"background" => get_field('background',$ShopPageId),
+														"image" => get_field('image',$ShopPageId),
+														"button" => get_field('button',$ShopPageId),
+
+														]
+											 ]);
+ ?>
 <div id="content">
 <div id="inner-content" class="wrap clearfix">
-<div id="main" class="col-md-8 clearfix float-right" role="main">
+<div id="main" class=" clearfix" role="main">
+	<?php //pagination_nav(); ?>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -23,13 +40,9 @@ get_header('shop'); ?>
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action('woocommerce_before_main_content');
+		// do_action( 'woocommerce_pagination' );
+		wc_get_template( 'loop/pagination.php' );
 	?>
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 

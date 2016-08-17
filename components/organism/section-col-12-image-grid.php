@@ -1,4 +1,3 @@
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
 
 <?php if($vars['title']) { ?>
 	<h1 class="text-center"><?php echo $vars['title']; ?></h1>
@@ -14,4 +13,3 @@
 	unset($element_file);
 	unset($element_vars);
  ?>
-</section>

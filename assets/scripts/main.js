@@ -78,18 +78,33 @@
   = Enabling multi-level navigation =
   ===============================================*/
   $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-      event.preventDefault(); 
-      event.stopPropagation(); 
+      event.preventDefault();
+      event.stopPropagation();
       $(this).parent().siblings().removeClass('open');
       $(this).parent().toggleClass('open');
   });
-
+  $('#sponsors .owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:3
+          }
+      }
+  });
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
     responsive:{
-        0:{ 
+        0:{
             items:1
         },
         600:{
@@ -101,8 +116,9 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
+
 $('.oembed .placeholder.video').on('click', function(event) {
       $(this).addClass('playing');
-}); 
+});
 
 })(jQuery); // Fully reference jQuery after this point.

@@ -3,35 +3,39 @@
 	background:$red-dark;
 	color:#fff;
 	border-radius:0px;
-	@extend .h3;
+	@extend .h4;
 	font-weight:bold;
 	padding-left:2em;
 	padding-right:2em;
 	padding-top:0.5em;
 	padding-bottom:0.5em;
+&.default {
+	.btn {
+		color:#fff;
+	}
+}
 //red
 &.red {
 	background:$red;
-	color:#fff;
+	color:#fff !important;
 	border-radius:0px;
 }
 &.teal {
 	background:$teal;
 	color:#fff;
 	border-radius:0px;
-} 
+}
 &.white {
 	background:#fff;
 	color:$color6;
 	border-radius:0px;
-} 
+}
 &.blue {
 	background:$blue;
 	color:#fff;
 	border-radius:0px;
-} 
+}
 
 
 
 }
-

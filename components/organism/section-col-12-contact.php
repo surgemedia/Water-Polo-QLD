@@ -4,9 +4,8 @@
 	// debug($vars);
 	?>
 
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
-	<div class="col-md-4 col-md-offset-4 text-center">
-		<div class="box">
+	<div class="col-md-6 col-md-offset-3 text-center">
+		<div class="">
 		<?php 
 		get_component([ 'template' => 'molecule/card',
 							'remove_tags' =>  $vars['remove_elements'],
@@ -28,4 +27,3 @@
 		 ?>
 		</div>
 	</div>
-</section>

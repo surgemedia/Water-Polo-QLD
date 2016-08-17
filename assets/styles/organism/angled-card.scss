@@ -30,37 +30,48 @@
 			// padding:0px;
 		}
 	}
-	
-		&.padding-2 {
+		
+		&.padding-2-top {
 			padding-top:0px;
-			padding-bottom:0px;
 			.card {
-				@extend .padding-2;
+				@extend .padding-2-top;
 			}
 
 		}
-		&.padding-4 {
-			padding-top:0px;
+		&.padding-2-bottom {
 			padding-bottom:0px;
 			.card {
-			@extend .padding-4;
+				@extend .padding-2-bottom;
 			}
 
 		}
-		&.padding-5 {
+		&.padding-4-top {
 			padding-top:0px;
+			.card {
+				@extend .padding-4-top;
+			}
+
+		}
+		&.padding-4-bottom {
 			padding-bottom:0px;
 			.card {
-				@extend .padding-5;
+				@extend .padding-4-bottom;
 			}
-			
+
 		}
-		&.padding-6 {
+		&.padding-6-top {
 			padding-top:0px;
+			.card {
+				@extend .padding-6-top;
+			}
+
+		}
+		&.padding-6-bottom {
 			padding-bottom:0px;
 			.card {
-				@extend .padding-6;
+				@extend .padding-6-bottom;
 			}
-			
+
 		}
+		
 }
