@@ -1,5 +1,5 @@
 <section class="page-heading <?php echo $vars['class'] ?>" style="background-image:url(<?php echo $vars["background"]; ?>)">
-<div class="white-bg">
+<div class="white-bg heading-gap">
 
 	<?php
 			/*=============================================

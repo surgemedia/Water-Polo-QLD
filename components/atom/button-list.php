@@ -26,8 +26,10 @@ if (1<$button_size) : ?>
 		if($button['create_other_window'])
 			$button['extra-data'] .=" target='_blank'";
 		?>
+		<?php if(!isset($button['disabled']) OR true != $button['disabled']){ ?>
 		<a class="btn text-uppercase <?php echo $button['class']?>" href="<?php echo $link?>" <?php echo $button['extra-data'] ?>> <?php echo $button['text']; ?> </a>
-	<?php } ?>
+			<?php } ?>
+		<?php } ?>
 <?php if (1<$button_size) : ?>
 </div>
 <?php endif; ?>

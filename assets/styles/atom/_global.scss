@@ -57,7 +57,7 @@ p {
 
 
 $border-style:5px solid #fff;
-@for $i from 1 through 10 {
+@for $i from 0 through 10 {
 	$direction : top;
   .padding-#{$i}-#{$direction}{padding-#{$direction}: 0em + $i;}
   .margin-#{$i}-#{$direction}{ margin-#{$direction}: 0em + $i;}

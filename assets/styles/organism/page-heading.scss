@@ -2,7 +2,6 @@
   overflow: hidden;
   .white-bg {
   text-align: center;
-  margin:300px 0em 150px 0em;
     h1 {
       margin-top: 0px;
       margin-bottom: 0.8em;
@@ -11,5 +10,8 @@
       @extend .col-sm-8;
       @extend .col-sm-offset-2;
     }
+  }
+  .heading-gap {
+   margin:300px 0em 150px 0em;
   }
 }

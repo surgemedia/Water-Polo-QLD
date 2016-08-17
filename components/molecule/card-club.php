@@ -1,5 +1,5 @@
 <?php
-	//debug($vars);
+	// debug($vars['button']);
 
 		$vars['card_class'] = 'pull-right';
 		$vars['img_class'] = 'pull-left';

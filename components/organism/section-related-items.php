@@ -34,9 +34,7 @@
                                                 "text" => "Add to Cart",
                                                 "link" => do_shortcode('[add_to_cart_url id="'.get_the_id().'"]'),
                                                 "external_link" => do_shortcode('[add_to_cart_url id="'.get_the_id().'"]'),
-
                                                 'link_type' => 'external',
-
                                                     ]
                                             ]
 
@@ -62,7 +60,8 @@
                                       'vars' => [
                                         "class" => 'btn text-uppercase pull-left',
                                         "text" => "Read More",
-                                        "url" => get_permalink()
+                                        "internal_link" => get_permalink(),
+                                        'link_type' => 'internal',
                                             ]
                                       ])
                                   ]
@@ -90,7 +89,8 @@
                                                           [[
                                                          "class" => 'btn text-uppercase',
                                                          "text" => "Read More",
-                                                         "url" => get_permalink()
+                                                          "internal_link" => get_permalink(),
+                                                         'link_type' => 'internal',
                                                              ]]
                                                    ]
                                               ]);
@@ -113,7 +113,8 @@
                                       'vars' => [
                                         "class" => 'btn text-uppercase pull-left',
                                         "text" => "Read More",
-                                        "url" => get_permalink()
+                                        "link" => get_permalink(),
+                                        'link_type' => 'internal',
                                             ]
                                       ])
                                   ]
