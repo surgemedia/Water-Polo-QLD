@@ -1,5 +1,8 @@
 .page-heading {
   overflow: hidden;
+  .pattern-bg:before {
+    display:none;
+  }
   .white-bg {
   text-align: center;
     h1 {

@@ -147,4 +147,14 @@ function popGallery(id){
         };
 
  });
+
+var windowObjectReference;
+function openRequestedPopup(button) {
+  windowObjectReference = window.open(
+     button.dataset.target,
+    "DescriptiveWindowName",
+    "resizable,scrollbars,status,navigator"
+  );
+}
+
 }(jQuery));

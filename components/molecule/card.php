@@ -19,6 +19,13 @@
 								'template' => 'atom/button-list',
 								'vars' => $vars['button']	
 								]);
+		} else {
+			if(isset($vars["button_list"]['button'])){
+				get_component([
+								'template' => 'atom/button-list',
+								'vars' => $vars["button_list"]['button']
+								]);
+			}
 		};
 		?>
 

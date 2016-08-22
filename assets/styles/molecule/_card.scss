@@ -1,5 +1,9 @@
 .card.molecule {
-
+		@extend .pattern-bg;
+		&:before {
+			left:0px;
+		}
+		text-align: center;
 	//core styles
 		.wrapper {
 			margin:0px;
@@ -9,9 +13,11 @@
 		hgroup { }
 		h1 { }
 		h6 { }
-
-
-	//color varities
+	
+		&.min-height {
+			    min-height: 570px;
+		}
+		//color varities
 		&.white-bg { .btn { }}
 		&.red-dark-bg { .btn { }}
 		&.red-bg { .btn { }}
@@ -53,6 +59,9 @@
 		}
 	}
 	&.club {
+		&:before {
+			display:none;
+		}
 		text-align: center;
 		 color:#fff;
 		.wrapper {

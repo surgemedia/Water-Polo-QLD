@@ -1,5 +1,6 @@
 
 <?php
+
 if (is_front_page()){ ?>
 <?php
 	get_component([ 'template' => 'organism/homepage-heading',
@@ -13,6 +14,7 @@ if (is_front_page()){ ?>
  ?>
 <?php }else{ ?>
 <?php
+	// debug(get_post_meta(get_the_id()));
 	get_component([ 'template' => 'organism/page-heading',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
@@ -22,7 +24,7 @@ if (is_front_page()){ ?>
 														"content" => get_field('content'),
 														"background" => get_field('background'),
 														"image" => get_field('image'),
-														"button" => get_field('button'),
+														"button" => get_field('button_list_button'),
 
 														]
 											 ]);
