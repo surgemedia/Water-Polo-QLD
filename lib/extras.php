@@ -72,6 +72,8 @@ function pagination_bar() {
             'testimonials' => false,
             'representative_teams' => true,
             'clubs' => true,
+            'galleries' => true,
+
 
   ];
 

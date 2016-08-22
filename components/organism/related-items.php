@@ -1,4 +1,4 @@
-     <?php
+<?php
 
         // WP_Query arguments
       $args = array (
@@ -15,8 +15,7 @@
       if ( $query->have_posts() ) {
         while ( $query->have_posts() ) {
           $query->the_post();
-
-          switch (get_post_type()) {
+           switch (get_post_type()) {
             case 'product':
              /*=============================================
             = Card (Class,Image,Title,Content)
@@ -121,8 +120,7 @@
                              ]);
                  break;
           } //switch
-
-        } //while
+        }
       } else {
         // no posts found
       }

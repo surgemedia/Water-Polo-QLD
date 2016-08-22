@@ -86,7 +86,23 @@ section {
   padding-left:0px;
   padding-right:0px;
   }
+  &.container {
+    &.margin-0-right {
+ 		margin-right: auto;
+    }
+    &.margin-0-left {
+    margin-left: auto;
+    }
+    &.padding-0-right {
+    padding-right: 15px;
+    }
+     &.padding-0-left {
+    padding-left: 15px;
+    }
+  }
 }
+
+
 .box {
 	padding:1em;
 	background-color:rgba(#fff,0.8);

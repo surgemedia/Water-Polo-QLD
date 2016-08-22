@@ -10,6 +10,9 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
+
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -19,10 +22,14 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+
       }
+      
     },
     // Home page
     'home': {
@@ -33,6 +40,7 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
+
     // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
@@ -121,4 +129,22 @@ $('.oembed .placeholder.video').on('click', function(event) {
       $(this).addClass('playing');
 });
 
+
+
 })(jQuery); // Fully reference jQuery after this point.
+
+(function($) {
+  $(document).ready(function(){
+   
+function popGallery(id){
+          $('#'+id+' button').on('click', function (event) {
+            event.preventDefault();
+            var options = {
+              container: '#'+id+' .blueimp-gallery'
+            };
+            blueimp.Gallery($('#'+id+' .links a'), options);
+          })
+        };
+
+ });
+}(jQuery));

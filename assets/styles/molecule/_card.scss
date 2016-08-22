@@ -17,7 +17,7 @@
 		&.red-bg { .btn { }}
 		&.grey-light-bg { .btn { }}
 		&.grey-bg { .btn { }}
-		&.blue-bg { .btn {background-color:$teal;}}
+		&.blue-bg { .btn { background-color:$teal;}}
 		&.teal-bg {}
 
 	//aditional
@@ -54,10 +54,11 @@
 	}
 	&.club {
 		text-align: center;
+		 color:#fff;
 		.wrapper {
 			padding-top:3em;
 		}
-		 h1 { @extend .h2; margin-bottom: 1em;}
+		 h1 { @extend .h2; margin-bottom: 1em; color:#fff;}
 		 p { font-size:1.6em;
 			 margin-bottom: 0.3em;
 		 }
@@ -65,6 +66,12 @@
 			 color:#000;
 			 h1,p {
 				 color:#000;
+			 }
+		 }
+		 &.grey-bg {
+			 color:#fff;
+			 h1,p {
+				 color:#fff;
 			 }
 		 }
 	}

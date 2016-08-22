@@ -282,6 +282,21 @@ endif;
 	]);
 	}
 
+/*=============================
+=            TEAMS            =
+=============================*/
+
+	if($cpt_enabled['galleries']){
+	$testimonials = new CPT([
+	    'post_type_name' => 'gallery',
+	    'plural' => 'Galleries',
+
+	]);
+	$testimonials->menu_icon("dashicons-format-gallery");
+	//Define post type
+
+	}
+
 
 
 	/*=============================

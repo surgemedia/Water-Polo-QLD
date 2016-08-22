@@ -1,3 +1,16 @@
+
+<script>
+function popGallery(id){
+          jQuery('#'+id+' .wrapper').on('click', function (event) {
+            event.preventDefault();
+            var options = {
+              container: '#'+id+' .blueimp-gallery'
+            };
+            blueimp.Gallery(jQuery('#'+id+' .links a'), options);
+          })
+        };
+
+</script>
 <footer id="footer" class="content-info">
   <div class="container text-center">
     <?php

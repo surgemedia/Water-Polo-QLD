@@ -8,8 +8,8 @@
 			get_component([ 'template' => 'molecule/image',
 												'vars' => [
 															"class" => 'col-md-2 pull-left',
-															"image" => $vars['1_image'],
-															"image_position" => $vars['1_image_position']
+															"image" => $vars['left']['image'],
+															"image_position" => $vars['left']['']
 												]
 											 ]);
 ?>
@@ -24,11 +24,11 @@
 							'remove_tags' =>  $vars['card_remove_elements'],
 											'vars' => [
 														"class" => 'col-md-8 card',
-														"title" => $vars["card_title"],
-														"subtitle" => $vars["card_subtitle"],
-														"content" => apply_filters('the_content',  $vars["card_content"]),
-														"image" => $vars['card_image'],
-														"button" => $vars['button']
+														"title" => $vars["card"]['title'],
+														"subtitle" => $vars["card"]["subtitle"],
+														"content" => apply_filters('the_content',  $vars["card"]["content"]),
+														"image" => $vars['card']['image'],
+														"button" => $vars['card']['button']
 														]
 											 ]);
 ?>
@@ -36,8 +36,8 @@
 			get_component([ 'template' => 'molecule/image',
 												'vars' => [
 															"class" => 'col-md-2 pull-right',
-															"image" => $vars['2_image'],
-															"image_position" => $vars['2_image_position']
+															"image" => $vars['right']['image'],
+															"image_position" => $vars['right']['']
 												]
 											 ]);
 ?>
