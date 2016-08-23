@@ -11,10 +11,10 @@
     }
   }
   nav {
-    text-align: center;
+    text-align: left;
     .navbar-nav {
       width:100%;
-      text-align: center;
+      text-align: left;
     }
 
     li {
@@ -28,7 +28,33 @@
     }
   }
 }
+.banner #navbar ul#menu-menu-1 {
+    width: 93%;
+    float: right;
+}
 
 #loginPopup {}
 
 #shopPopup {}
+.banner{
+ #logowrapper {
+  text-align: left;
+    width: 181px;
+    height:67%;
+    img {
+      height: auto;
+    width: 100%;
+    padding: 4em 1em;
+    }
+}
+#navbar {
+  padding:0px;
+  .navbar-nav {
+    width:100%;
+  }
+}
+.nav-secondary {
+    margin: 0px;
+    width: 100%;
+}
+}

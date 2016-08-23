@@ -14,7 +14,11 @@ if (is_front_page()){ ?>
  ?>
 <?php }else{ ?>
 <?php
-	// debug(get_post_meta(get_the_id()));
+	
+	$heading_gap = "heading-gap";
+	if(get_field('heading-gap') == fales){
+		$heading_gap = "heading-gap";
+	}
 	get_component([ 'template' => 'organism/page-heading',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
@@ -25,9 +29,11 @@ if (is_front_page()){ ?>
 														"background" => get_field('background'),
 														"image" => get_field('image'),
 														"button" => get_field('button_list_button'),
+														 "heading-gap" => $heading_gap
 
 														]
 											 ]);
+	unset($heading_gap);
  ?>
 <?php } ?>
 <div class="">

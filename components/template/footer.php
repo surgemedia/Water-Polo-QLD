@@ -9,7 +9,15 @@ function popGallery(id){
             blueimp.Gallery(jQuery('#'+id+' .links a'), options);
           })
         };
-
+        var windowObjectReference;
+    function openRequestedPopup(button) {
+      console.log(button.dataset.target)
+      windowObjectReference = window.open(
+         button.dataset.target,
+        "DescriptiveWindowName",
+        "resizable,scrollbars,status,navigator"
+      );
+    }
 </script>
 <footer id="footer" class="content-info">
   <div class="container text-center">

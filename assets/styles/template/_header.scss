@@ -5,9 +5,13 @@
 				width:100%;
 
 			}
+#navbar {
+	padding: 0px;
+}
 .banner {
 		background: $teal;
-	    display: block;
+	    display: inline-block;
+	    width:100%;
 	    position:relative;
 			a.brand {
 			    color:#fff;
@@ -31,8 +35,9 @@
 				display:inline-block;
 				 text-align: left;
 			   .navbar-nav {
-			      width:100%;
+			      width:97%;
 			      text-align: left;
+			      float:right;
 			    }
 					li {
 			    display: inline-block;

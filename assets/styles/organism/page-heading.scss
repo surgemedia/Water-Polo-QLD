@@ -3,6 +3,9 @@
   .pattern-bg:before {
     display:none;
   }
+  .wrapper {
+    overflow: hidden;
+  }
   .white-bg {
   text-align: center;
     h1 {
@@ -16,5 +19,11 @@
   }
   .heading-gap {
    margin:300px 0em 150px 0em;
+  } 
+  .heading-gap-top {
+   margin:300px 0em 0px 0em;
+  }
+  .button-list {
+    clear:both;
   }
 }

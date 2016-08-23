@@ -72,6 +72,7 @@
                 if($club_count%2 == 0){
                   $temp_class = 'grey-bg';
                 }
+              
                             /*=============================================
                              = Club Card (Class,Logo,Title,Content)
                              = @components
@@ -85,12 +86,22 @@
                                                    "image" => get_field("logo"),
                                                    "content" => get_the_content(),
                                                    "button" =>
-                                                          [[
+                                                          [
+                                                          [
                                                          "class" => 'btn text-uppercase',
-                                                         "text" => "Read More",
+                                                         "text" => "About the club",
                                                           "internal_link" => get_permalink(),
                                                          'link_type' => 'internal',
-                                                             ]]
+                                                             ],
+                                                               [
+                                                               "class" => 'btn text-uppercase',
+                                                               "text" => "Register",
+                                                                "external_link" => get_field('register_link'),
+                                                               'link_type' => 'external',
+                                                               'disabled' => (!get_field('register_link')) ? true : false,
+                                                               'js-popup' => true,
+                                                               ]
+                                                             ]
                                                    ]
                                               ]);
             break;

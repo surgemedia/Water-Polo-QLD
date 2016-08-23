@@ -1,6 +1,5 @@
 <section class="page-heading <?php echo $vars['class'] ?>" style="background-image:url(<?php echo $vars["background"]; ?>)">
-<div class="white-bg heading-gap">
-
+<div class="white-bg <?php echo $vars['heading-gap'] ?>">
 	<?php
 			/*=============================================
 			=    Card Header (Class,Subtitle,Title,Content)

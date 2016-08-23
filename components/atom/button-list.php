@@ -12,12 +12,18 @@ if (1<$button_size) : ?>
 				break;
 			case 'external':
 				$link = (!empty($button['external_link'])) ? $button['external_link'] : '#no-link';
+				if($button['js-popup']){
+						$button['extra-data'] = 'data-target="'.$link.'" onclick="openRequestedPopup(this);"';
+						$link = '#';
+				}
 				break;
 			case 'anchor':
-				$link = "#".(!empty($button['anchor_link'])) ? $button['anchor_link'] : '#no-link';
+				$link = "#";
+				$link .= (!empty($button['anchor_link'])) ? $button['anchor_link'] : '#no-link';
 				break;
 			case 'archive':
-				$link = "#".(!empty($button['archive_link'])) ? $button['archive_link'] : '#no-link';
+			//file or media
+				$link = (!empty($button['archive_link'])) ? $button['archive_link'] : '#no-link';
 				break;
 			default:
 				$link = (!empty($button['link'])) ? $button['link'] : '#no-link';

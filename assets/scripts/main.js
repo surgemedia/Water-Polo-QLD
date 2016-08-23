@@ -146,7 +146,6 @@ function popGallery(id){
           })
         };
 
- });
 
 var windowObjectReference;
 function openRequestedPopup(button) {
@@ -157,4 +156,5 @@ function openRequestedPopup(button) {
   );
 }
 
+ });
 }(jQuery));

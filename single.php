@@ -1,10 +1,54 @@
-<section id="" class="white-bg container padding-4 margin-0 text-left" >
- 	<article class="col-md-12  molecule card">
-    <div class="entry-content">
-      <?php the_content(); ?>
-    </div>
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-		</article>
+<section class="page-heading club <?php echo $vars['class'] ?>" style="background-image:url(<?php echo get_field('additional_image'); ?>)">
+
+<div class="text-center container border-top ">
+</div>
+
+<div class="teal-bg">
+<div class="container">
+	<?php
+		//Navigation
+ 			get_component([
+              'template' => 'atom/button-list',
+              'vars' => [
+
+										[
+											"class" => 'btn blue text-uppercase margin-0-top',
+											"text" => "Back to News",
+											"internal_link" => '/news',
+											'link_type' => 'internal',
+											'disabled' => false
+										],
+										[
+											"class" => 'btn blue text-uppercase margin-0-top pull-right',
+											"text" => "Next",
+											"internal_link" => get_permalink(get_next_post()->ID),
+											'link_type' => 'internal',
+											'disabled' => (!get_next_post()) ? true : false
+										],
+										]
+              ]);
+?>
+</div>
+</div>
+<div class="white-bg margin-0-top margin-10-bottom padding-5-bottom">
+
+	<?php
+			/*=============================================
+			=    Card Header (Class,Subtitle,Title,Content)
+			= @components
+				+ molecule/card-header
+			=============================================*/
+			get_component([ 'template' => 'molecule/card',
+											'remove_tags' => ['img'],
+											'vars' => [
+														"class" => 'card container padding-4',
+														"subtitle" => $vars["subtitle"],
+														"title" => get_the_title(),
+														"content" => apply_filters('the_content',  get_the_content()),
+														"button" => $vars['button']
+														]
+											 ]);
+	 ?>
+	 </div>
 </section>
+      

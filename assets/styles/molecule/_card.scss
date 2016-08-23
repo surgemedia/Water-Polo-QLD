@@ -6,8 +6,11 @@
 		text-align: center;
 	//core styles
 		.wrapper {
-			margin:0px;
-			padding:4em 0em;
+			margin:0px auto;
+			padding:4em 1em;
+			// width:90%;
+			float:none;
+			display:block;
 		}
 		img { }
 		hgroup { }
@@ -59,13 +62,14 @@
 		}
 	}
 	&.club {
+		overflow: hidden;
 		&:before {
 			display:none;
 		}
 		text-align: center;
 		 color:#fff;
 		.wrapper {
-			padding-top:3em;
+			padding-top:3em; 
 		}
 		 h1 { @extend .h2; margin-bottom: 1em; color:#fff;}
 		 p { font-size:1.6em;
@@ -74,7 +78,7 @@
 		 &.grey-light-bg {
 			 color:#000;
 			 h1,p {
-				 color:#000;
+				 color:#000; 
 			 }
 		 }
 		 &.grey-bg {
