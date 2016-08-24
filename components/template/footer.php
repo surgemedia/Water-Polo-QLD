@@ -1,24 +1,5 @@
 
-<script>
-function popGallery(id){
-          jQuery('#'+id+' .wrapper').on('click', function (event) {
-            event.preventDefault();
-            var options = {
-              container: '#'+id+' .blueimp-gallery'
-            };
-            blueimp.Gallery(jQuery('#'+id+' .links a'), options);
-          })
-        };
-        var windowObjectReference;
-    function openRequestedPopup(button) {
-      console.log(button.dataset.target)
-      windowObjectReference = window.open(
-         button.dataset.target,
-        "DescriptiveWindowName",
-        "resizable,scrollbars,status,navigator"
-      );
-    }
-</script>
+<?php get_component([ 'template' => 'atom/footer-scripts' ]); ?>
 <footer id="footer" class="content-info">
   <div class="container text-center">
     <?php

@@ -93,6 +93,7 @@ $custom_includes = [
 
   /* Functions */
   'lib/function-debug.php',    // Scripts and stylesheets
+  'lib/acf-map.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
   'lib/function-get_component.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets

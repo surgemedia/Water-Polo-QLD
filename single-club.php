@@ -50,11 +50,27 @@
 														]
 											 ]);
 	 ?>
-	 <div class="text-center">
-	 <h4>Location</h4>
-	 <p><?php the_field('map') ?></p>
-	<h4>Website</h4>
-	<p><?php the_field('website') ?></p>
- </div></div>
+	 <div class="text-center container">
+	 <h4><strong>Location</strong></h4>
+	 <?php 
+
+$location = get_field('map');
+
+if( !empty($location) ):
+?>
+<div class="acf-map">
+	<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+</div>
+<?php endif; ?>
+	
+ </div>
+	<div class="text-center container">
+		<h4 class="text-center"><strong>Website</strong></h4>
+		<p>
+		<a href="<?php the_field('website'); ?>"><?php echo explode('//',get_field('website'))[1]; ?></a>
+		</p>
+	</div>
+ </div>
 </section>
+
       
