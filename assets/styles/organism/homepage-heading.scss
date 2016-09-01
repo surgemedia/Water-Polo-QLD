@@ -24,12 +24,16 @@
     }
   }
   .owl-nav {
+    display: none;
     div {
       &.owl-prev {}
       &.owl-next {}
     }
   }
   .owl-dots {
+    position:absolute;
+    top:0px;
+    left:0px;
     span {}
   }
 }

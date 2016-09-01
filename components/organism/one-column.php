@@ -1,4 +1,3 @@
-<?php  ?>
  	<?php 
 		unset($element_file);
 		unset($element_vars);
@@ -9,6 +8,8 @@
 			$element_vars = $vars['element'][$i];
 			get_component([
 		 		'template' => 'molecule/'.$element_file,
+		 		'remove_tags' => $element_vars['remove_elements'],
+
 		 		'vars' => $element_vars
 				]);
 

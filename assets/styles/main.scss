@@ -61,6 +61,7 @@
 @import 'organism/three-columns';
 @import 'organism/two-columns';
 @import 'organism/media-block';
+@import 'organism/hide-reveal';
 
 
 /*=================================
@@ -105,4 +106,7 @@
 }
 @media (min-width: 1440px){
 	@import "res/_res-1440.scss";
+}
+@media (min-width: 1028px) and (max-width: 1352px){
+	@import "res/_res-1028.scss";
 }

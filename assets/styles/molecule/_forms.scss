@@ -50,9 +50,11 @@
 				@extend .list-inline;
 				.gfield {
 					@extend .col-md-6;
+					@extend .col-xs-12;
 					clear:none;
 					&:last-child {
 						@extend .col-md-12;
+						@extend .col-xs-12;
 					}
 					.gfield_label {
 							// display: none;
@@ -160,6 +162,8 @@
 		}
 		.gform_footer {
 			@extend .col-md-6;
+			@extend .col-xs-12;
+
 			@extend .pull-right;
 			padding:0em;
 			&.secure {
@@ -176,5 +180,19 @@
 				font-size:2em;
 			}
 		}
+	}
+	.validation_error {
+		background: #8b0e04 !important;
+    border: 0px !important;
+    color: #fff !important;
+    text-indent: 15px;
+	}
+	.validation_message {
+		font-size: 1.3em !important;
+    background: #8b0e04 !important;
+    color: #fff !important;
+    padding: 1em !important;
+    width: 99% !important;
+    text-indent: 12px;
 	}
 }

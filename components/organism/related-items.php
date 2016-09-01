@@ -5,6 +5,7 @@
         "post_type" => "any",
         "post__in" => $vars['website_items'],
         "orderby" => "post__in",
+        "posts_per_page" => -1
 
       );
       $club_count = 0;
@@ -67,12 +68,29 @@
                              ]);
               break;
               case 'club':
-                $club_count++;
-                $temp_class = 'grey-light-bg';
-                if($club_count%2 == 0){
-                  $temp_class = 'grey-bg';
+                $temp_class = '';
+                if($club_count == 4){
+                   $club_count = 0;
                 }
-              
+                 if($club_count == 3){
+                  $temp_class = 'grey-light-bg';
+                   $club_count++;
+                }
+                 if($club_count == 2){
+                  $temp_class = 'grey-bg';
+                  $club_count++;
+                }
+                 if($club_count == 1){
+                  $temp_class = 'grey-bg';
+                  $club_count++;
+                }
+                if($club_count == 0){
+                  $temp_class = 'grey-light-bg';
+                   $club_count++;
+                } 
+
+                
+
                             /*=============================================
                              = Club Card (Class,Logo,Title,Content)
                              = @components
@@ -84,7 +102,7 @@
                                                    "class" => 'col-md-6 card club padding-4-top padding-4-bottom '.$temp_class,
                                                    "title" => get_the_title(),
                                                    "image" => get_field("logo"),
-                                                   "content" => get_the_content(),
+                                                   "content" => truncate(get_the_content(),25,'',false),
                                                    "button" =>
                                                           [
                                                           [

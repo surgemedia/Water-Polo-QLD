@@ -95,6 +95,7 @@ $custom_includes = [
   'lib/function-debug.php',    // Scripts and stylesheets
   'lib/acf-map.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
+  'lib/function-is_realy_woocommerce_page.php',    // Scripts and stylesheets
   'lib/function-get_component.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets

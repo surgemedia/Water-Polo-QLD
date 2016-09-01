@@ -17,6 +17,19 @@ function popGallery(id){
         "resizable,scrollbars,status,navigator"
       );
     }
+
+function renderCalendar(render,event_list){
+ 
+  jQuery(render).fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    editable: true,
+    events: event_list
+  });
+}
 </script>
 <style type="text/css">
 
@@ -205,3 +218,8 @@ $(document).ready(function(){
 
 })(jQuery);
 </script>
+ <script>
+ jQuery(document).ready(function(){
+        jQuery('.dropdown-toggle').dropdown();
+   });
+      </script>

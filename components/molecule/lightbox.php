@@ -5,7 +5,7 @@ switch ($vars['trigger_element']) {
 ?>
 <?php	case 'card': ?>
 <?php //debug($vars['card']); ?>
-<article id="<?php echo $vars['gallery_id']; ?>" class="<?php echo $vars['card']['class'].' '.$vars['card']['background_color'] ?>  molecule card">
+<article id="<?php echo $vars['gallery_id']; ?>" class="<?php echo $vars['card']['class'].' '.$vars['card']['background_color'] ?>  molecule lightbox card">
 <div class="blueimp-gallery">
     <div class="slides"></div>
     <h3 class="title"></h3>

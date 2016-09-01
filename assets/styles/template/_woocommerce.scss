@@ -41,6 +41,18 @@
   }
 }
 
+.woocommerce-MyAccount-navigation {
+    list-style: none;
+    ul { 
+    list-style: none;
+    text-align: left;
+    font-size: 2em;
+     li {
+    padding: 1em 0 0 0;
+    }
+  }
+}
+
 
 ul.products {
     .product.type-product {

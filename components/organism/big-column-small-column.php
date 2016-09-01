@@ -17,7 +17,7 @@
 	=            Setup Vars            =
 	==================================*/
 	?>
-		<div class="col-md-8">
+		<div class="col-md-8 hidden-xs hidden-sm">
 	<?php
 	get_component([
 	 'template' => 'molecule/'.$element_file_1,
@@ -34,6 +34,15 @@
 	 'vars' => $element_vars_2
 			]);
 		?>
+	</div>
+
+	<div class="col-sm-12 visable-xs visable-sm hidden-md hidden-lg">
+	<?php
+	get_component([
+	 'template' => 'molecule/'.$element_file_1,
+	 'vars' => $element_vars_1
+			]);
+			?>
 	</div>
 	<?php
 	unset($element_file_1);

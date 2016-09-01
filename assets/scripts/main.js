@@ -107,6 +107,7 @@
           }
       }
   });
+
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -123,13 +124,41 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-
+  $('.homepage-heading.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+  });
 
 $('.oembed .placeholder.video').on('click', function(event) {
       $(this).addClass('playing');
 });
 
+$('.close-tab').on('click',function(event){
+  event.preventDefault();
+  $(this).parent().removeClass('active');
+  $(".nav-tabs li").removeClass('active');
+});
 
+$("[data-toggle='reveal']").on('click',function(event){
+    event.preventDefault();
+    var id = $(this).attr("href");
+    var show= $(this).parents(".card").siblings(".show-reveal");
+    $(this).remove();
+    $(id).clone().appendTo(show);
+
+});
 
 })(jQuery); // Fully reference jQuery after this point.
 
@@ -157,4 +186,9 @@ function openRequestedPopup(button) {
 }
 
  });
+
+
+
+
 }(jQuery));
+

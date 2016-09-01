@@ -16,7 +16,10 @@
                                ]
                           ]);?>
       </div>
+      <div class="dotcontainer">
+      </div>    
       <?php }
     ?>
 
 </section>
+

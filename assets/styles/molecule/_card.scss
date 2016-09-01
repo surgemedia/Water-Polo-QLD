@@ -13,10 +13,13 @@
 			display:block;
 		}
 		img { }
-		hgroup { }
+		hgroup { width:75%; margin:0 auto; }
 		h1 { }
 		h6 { }
-	
+		p { 
+			margin:0px auto;
+			width:90%;
+		}
 		&.min-height {
 			    min-height: 570px;
 		}
@@ -26,7 +29,7 @@
 		&.red-bg { .btn { }}
 		&.grey-light-bg { .btn { }}
 		&.grey-bg { .btn { }}
-		&.blue-bg { .btn { background-color:$teal;}}
+		&.blue-bg { .btn { }}
 		&.teal-bg {}
 
 	//aditional
@@ -71,6 +74,9 @@
 		.wrapper {
 			padding-top:3em; 
 		}
+			img {
+				margin:0 auto;
+			}
 		 h1 { @extend .h2; margin-bottom: 1em; color:#fff;}
 		 p { font-size:1.6em;
 			 margin-bottom: 0.3em;
@@ -87,5 +93,23 @@
 				 color:#fff;
 			 }
 		 }
+	}
+	&.lightbox {
+		.wrapper {
+			text-align: center;
+		hgroup { 
+			width:100%; 
+			h1 {
+				padding:0px;
+			}
+		}
+		img {
+			    max-height: 330px;
+    float: none;
+    margin: 0 auto;
+		}
+		padding-bottom:6em;
+		}
+
 	}
 }

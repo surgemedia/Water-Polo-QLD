@@ -14,6 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 get_header('shop'); ?>
 <?php
 	$ShopPageId = get_option( 'woocommerce_shop_page_id' );
+	$heading_gap = "heading-gap";
+	if(get_field('heading-gap',$ShopPageId) === false){
+		$heading_gap = "heading-gap-top";
+	}
 	get_component([ 'template' => 'organism/page-heading',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
@@ -24,7 +28,7 @@ get_header('shop'); ?>
 														"background" => get_field('background',$ShopPageId),
 														"image" => get_field('image',$ShopPageId),
 														"button" => get_field('button',$ShopPageId),
-
+														"heading-gap" => $heading_gap
 														]
 											 ]);
  ?>
@@ -106,4 +110,28 @@ get_header('shop'); ?>
 	<!-- </div> -->
 </div>
 </div>
+<?php 
+
+	$vars['front_page'] = get_option('page_on_front');
+	$vars['builder'] = get_field('layout',$vars['front_page']);
+	foreach ($vars['builder'] as $key => $layout) {
+
+		if($layout['acf_fc_layout'] == 'contact'){					
+			//Section Options
+			$layout["section"] = $layout['acf_fc_layout'];
+			$layout['section_data'] = get_section_options($layout);
+
+			//Call file for display
+			echo '<section '.$layout['section_data'].'>';
+					get_component([
+								'template' => 'organism/contact',
+								'vars' => $layout
+					]);
+						
+			echo '</section>';
+			
+		}
+	} 
+
+?>
 <?php get_footer('shop'); ?>

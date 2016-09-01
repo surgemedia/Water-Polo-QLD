@@ -14,8 +14,8 @@
 
 										[
 											"class" => 'btn blue text-uppercase margin-0-top',
-											"text" => "Back to clubs",
-											"internal_link" => 'clubs',
+											"text" => "Back",
+											"internal_link" => '/',
 											'link_type' => 'internal',
 											'disabled' => false
 										],
@@ -50,27 +50,67 @@
 														]
 											 ]);
 	 ?>
-	 <div class="text-center container">
-	 <h4><strong>Location</strong></h4>
+	 <?php 
+
+$link = get_field('register_link');
+
+if( !empty($link) ):
+?>
+	 <div class="text-center container padding-4-bottom">
+<a class="btn red-dark" href="<?php echo get_field('register_link'); ?>">Register Now</a>
+ </div>
+<?php endif; ?>
 	 <?php 
 
 $location = get_field('map');
 
 if( !empty($location) ):
 ?>
+	 <div class="text-center container">
+	
+ <h4><strong>Location</strong></h4>
 <div class="acf-map">
 	<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 </div>
-<?php endif; ?>
 	
  </div>
+<?php endif; ?>
+<?php 
+		$website = get_field('website');
+		if( !empty($website) ):
+	?>
 	<div class="text-center container">
 		<h4 class="text-center"><strong>Website</strong></h4>
 		<p>
 		<a href="<?php the_field('website'); ?>"><?php echo explode('//',get_field('website'))[1]; ?></a>
 		</p>
 	</div>
+	<?php endif; ?>
  </div>
 </section>
 
       
+<?php 
+
+	$vars['front_page'] = get_option('page_on_front');
+	$vars['builder'] = get_field('layout',$vars['front_page']);
+	foreach ($vars['builder'] as $key => $layout) {
+
+		if($layout['acf_fc_layout'] == 'contact'){					
+			//Section Options
+			$layout["section"] = $layout['acf_fc_layout'];
+			$layout['section_data'] = get_section_options($layout);
+
+			//Call file for display
+			echo '<section '.$layout['section_data'].'>';
+					get_component([
+								'template' => 'organism/contact',
+								'vars' => $layout
+					]);
+						
+			echo '</section>';
+			
+		}
+	} 
+
+?>

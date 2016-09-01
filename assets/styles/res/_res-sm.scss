@@ -61,7 +61,7 @@ button.navbar-toggle {
     width: 45%;
     float: none;
     padding: 2.5em 0 2em 0em !important;
-    border-top: 6.5em solid $color6;
+    border-top: 6.5em solid $color5;
     margin: 0 auto;
 
 } 
@@ -120,3 +120,32 @@ button.navbar-toggle {
 #loginPopup {}
 
 #shopPopup {}
+
+.small-column-big-column {
+  div {
+    position:relative;
+    .molecule.image {
+      position:relative;
+      img {
+        width:100%;
+        max-width:none;
+        height:auto;
+        position:relative;
+      }
+    }
+  }
+}
+.big-column-small-column {
+  div {
+    position:relative;
+    .molecule.image {
+      position:relative;
+      img {
+        width:100%;
+        max-width:none;
+        height:auto;
+        position:relative;
+      }
+    }
+  }
+} 

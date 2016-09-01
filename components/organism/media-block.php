@@ -5,14 +5,11 @@
 	=====================================*/
 	$element_file_1 = $vars['1_element']['element'][0]['acf_fc_layout']; //get file
 	$element_file_2 = $vars['2_element']['element'][0]['acf_fc_layout']; //get file
-	// $element_file_3 = $vars['3_element'][0]['acf_fc_layout']; //get file
-	// $element_file_4 = $vars['4_element'][0]['acf_fc_layout']; //get file
+
 
 
 	unset($vars['1_element']['element'][0]['acf_fc_layout']); // remove file from array leveling only vars
 	unset($vars['2_element']['element'][0]['acf_fc_layout']); // remove file from array leveling only vars
-	// unset($vars['3_element'][0]['acf_fc_layout']); // remove file from array leveling only vars
-	// unset($vars['4_element'][0]['acf_fc_layout']); // remove file from array leveling only vars
 
 
 
@@ -53,6 +50,8 @@
 	//Element 1
 	get_component([
 	 'template' => 'molecule/'.$element_file_1,
+	 'remove_tags' => $vars['1_element']['element'][0]['remove_elements'],
+
 	 'vars' => $element_vars_1
 			]);
 	?>
@@ -63,6 +62,7 @@
 	//Element 2
 	get_component([
 	 'template' => 'molecule/'.$element_file_2,
+	 'remove_tags' => $vars['1_element']['element'][0]['remove_elements'],
 	 'vars' => $element_vars_2
 			]);
 		?>

@@ -7,3 +7,14 @@
     padding: 4em 1em;
     }
 }
+
+.small-column-big-column,
+.big-column-small-column {
+  .molecule.image {
+    img {
+      height:auto;
+      max-width:100%;
+      width:100%;
+    }
+  }
+}

@@ -16,8 +16,8 @@ if (is_front_page()){ ?>
 <?php
 	
 	$heading_gap = "heading-gap";
-	if(get_field('heading-gap') == fales){
-		$heading_gap = "heading-gap";
+	if(get_field('heading-gap') === false){
+		$heading_gap = "heading-gap-top";
 	}
 	get_component([ 'template' => 'organism/page-heading',
 											'remove_tags'=> get_field('remove_elements'),
@@ -50,6 +50,7 @@ foreach ($layout_builder as $key => $value) {
 	$value['section_data'] = get_section_options($value);
 	//Call file for display
 	echo '<section '.$value['section_data'].'>';
+	
 			get_component([
 						'template' => 'organism/'.$section_file,
 						'vars' => $value
@@ -61,7 +62,12 @@ foreach ($layout_builder as $key => $value) {
 		unset($section_file);
 	}
 } else {
-	if(is_cart() OR is_woocommerce() OR is_checkout()) {
+
+
+
+
+
+	if(is_realy_woocommerce_page ()) {
 		get_component([
 						'template' => 'template/simple-page',
 						'vars' => []
@@ -74,4 +80,31 @@ foreach ($layout_builder as $key => $value) {
 	}
 }
  ?>
+
+<?php 
+if (!is_front_page()){
+	$vars['front_page'] = get_option('page_on_front');
+	$vars['builder'] = get_field('layout',$vars['front_page']);
+	foreach ($vars['builder'] as $key => $layout) {
+
+		if($layout['acf_fc_layout'] == 'contact'){					
+			//Section Options
+			$layout["section"] = $layout['acf_fc_layout'];
+			$layout['section_data'] = get_section_options($layout);
+
+			//Call file for display
+			echo '<section '.$layout['section_data'].'>';
+					get_component([
+								'template' => 'organism/contact',
+								'vars' => $layout
+					]);
+						
+			echo '</section>';
+			
+		}
+	} 
+}	
+?>
+
+
 </div>

@@ -15,6 +15,7 @@
     p {
       @extend .col-sm-8;
       @extend .col-sm-offset-2;
+      float:none;
     }
   }
   .heading-gap {

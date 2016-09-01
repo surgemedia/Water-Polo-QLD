@@ -1,4 +1,4 @@
-
+<script src="http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js"></script>
 <?php get_component([ 'template' => 'atom/footer-scripts' ]); ?>
 <footer id="footer" class="content-info">
   <div class="container text-center">

@@ -12,6 +12,7 @@
 	//Define post typ
 	$events->register_taxonomy([
 	    'taxonomy_name' => 'event_category',
+	    'plural' => 'event categories',
 	]);
 	
 	if( function_exists('acf_add_local_field_group') ):
@@ -264,6 +265,8 @@ endif;
 	//Define post type
 	$testimonials->register_taxonomy([
 	    'taxonomy_name' => 'testimonial_category',
+	    'plural' => 'testimonial categories',
+
 	]);
 	}
 
@@ -279,6 +282,8 @@ endif;
 	//Define post type
 	$testimonials->register_taxonomy([
 	    'taxonomy_name' => 'representative_teams_category',
+	    'plural' => 'Representative Teams categories',
+
 	]);
 	}
 
@@ -308,7 +313,10 @@ endif;
 	]);
 	$testimonials->menu_icon("dashicons-groups");
 	//Define post type
-	$testimonials->register_taxonomy([
-	    'taxonomy_name' => 'club_category',
-	]);
+	// $testimonials->register_taxonomy([
+	//     'taxonomy_name' => 'club_category',
+	//     'plural' => 'Club categories',
+
+
+	// ]);
 	}
