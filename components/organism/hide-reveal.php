@@ -22,11 +22,6 @@
                                
                             ]
                        ]); ?>
-			
-
-
-
-    	
     </li>
 	<?php  } unset($i); ?>
   </ul>
@@ -35,14 +30,14 @@
   <div class="tab-content">
     <?php for ($i=0; $i < $vars['loop_size']; $i++) {  ?>
       <div role="tabpanel" class="tab-pane <?php //if($i == 0){echo 'active'; } ?>" id="<?php echo $vars['tabs'][$i]['slug']; ?>">
-      <a href="#" class="close-tab"><i class="glyphicon glyphicon-remove"></i></a>
+      <a href="#" class="close-tab"><i class="icon-cancel"></i></a>
 
       <?php 
       //debug($vars['tabs'][$i]['card']);
       get_component([ 'template' => 'molecule/card',
                             'remove_tags'=>$vars['tabs'][$i]['card']['remove_elements'],
                             'vars' => [
-                                  "class" => $vars['tabs'][$i]['card']['class'],
+                                  "class" => $vars['tabs'][$i]['card']['class'].' white-bg',
                                   "title" => $vars['tabs'][$i]['card']['title'],
                                   "subtitle" => $vars['tabs'][$i]['card']['subtitle'],
                                   "content" => $vars['tabs'][$i]['card']['content'],

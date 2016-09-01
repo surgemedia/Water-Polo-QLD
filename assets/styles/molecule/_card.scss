@@ -24,6 +24,9 @@
 			    min-height: 570px;
 		}
 		//color varities
+		&.default {
+			color:$grey-dark;
+		}
 		&.white-bg { .btn { }}
 		&.red-dark-bg { .btn { }}
 		&.red-bg { .btn { }}
