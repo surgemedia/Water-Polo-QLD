@@ -8,7 +8,10 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.6",
-    "owl.carousel": "^2.0.0-beta.3"
+    "owl.carousel": "^2.0.0-beta.3",
+    "blueimp-gallery-with-desc": "^2.16.4",
+    "bootstrap-calendar": "^0.2.5",
+    "moment": "^2.14.1"
   },
   "overrides": {
     "owl.carousel": {
@@ -37,6 +40,12 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "blueimp-gallery-with-desc": {
+      "main": [
+        "./css/blueimp-gallery.min.css",
+        "./js/jquery.blueimp-gallery.min.js"
       ]
     }
   }

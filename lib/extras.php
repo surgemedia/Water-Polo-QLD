@@ -32,6 +32,36 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
+//GOOGLE MAP API
+function my_acf_google_map_api( $api ){
+
+	$api['key'] = 'AIzaSyDWxFHYJfYwWACgI7G0a70u-0aUpkI6xZE';
+
+	return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+/*=========================================
+=            Woocommerce Pagination          =
+=========================================*/
+function pagination_bar() {
+    global $wp_query;
+ 
+    $total_pages = $wp_query->max_num_pages;
+
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+        ));
+    }
+}
 
 
 /*=========================================
@@ -42,6 +72,8 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
             'testimonials' => false,
             'representative_teams' => true,
             'clubs' => true,
+            'galleries' => true,
+
 
   ];
 
@@ -56,12 +88,14 @@ $custom_includes = [
   'lib/gravity_forms-v5.php',
 
   /* Post Types */
-  //'lib/post_type_foodstorm.php',   
-  //'lib/post_type_testimonial.php',  
+  //'lib/post_type_foodstorm.php',
+  //'lib/post_type_testimonial.php',
 
   /* Functions */
   'lib/function-debug.php',    // Scripts and stylesheets
+  'lib/acf-map.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
+  'lib/function-is_realy_woocommerce_page.php',    // Scripts and stylesheets
   'lib/function-get_component.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
@@ -69,7 +103,7 @@ $custom_includes = [
   'lib/custom_post_type_class.php',    // Create Custom Post Types
   'lib/post-types.php',    // Create Custom Post Types
   'lib/supports.php',    // Create Custom Post Types
-  // 'lib/class-layoutbuilder.php',    // Create Custom Post Types
+  'lib/function-getYoutubeId.php',
   'lib/create-home-page.php',    // Create Custom Post Types
   'lib/function-get_section_options.php',    // Scripts and stylesheets
 ];
@@ -82,9 +116,3 @@ foreach ($custom_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
-
-
-
-
-
-

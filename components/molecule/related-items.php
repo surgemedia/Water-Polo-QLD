@@ -31,7 +31,7 @@
 			                                'vars' => [
 													"class" => 'btn text-uppercase pull-left',
 													"text" => "Read More",
-													"url" => get_permalink()
+													"link" => get_permalink()
 																						]
 			                                ])
 			                            ]

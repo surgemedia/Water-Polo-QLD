@@ -1,5 +1,5 @@
-<article class="<?php echo $vars['class'] ?>  molecule card">
-
+<article class="<?php echo $vars['class'].' '.$vars['background_color'] ?>  molecule card">
+<div class="wrapper">
 <?php if(isset($vars["image"]) && strlen($vars["image"]) > 0) { ?>
 	<img class="img-responsive" src="<?php echo $vars["image"]?>" alt=""></img>
 	<?php } ?>
@@ -19,6 +19,14 @@
 								'template' => 'atom/button-list',
 								'vars' => $vars['button']	
 								]);
+		} else {
+			if(isset($vars["button_list"]['button'])){
+				get_component([
+								'template' => 'atom/button-list',
+								'vars' => $vars["button_list"]['button']
+								]);
+			}
 		};
 		?>
+
 </article>

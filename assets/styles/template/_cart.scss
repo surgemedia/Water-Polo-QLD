@@ -1,0 +1,83 @@
+.woocommerce{
+	.shop_table.cart{
+		border:none;
+		thead{
+			background-color: $blue;
+			th{
+				@extend .p4;
+				color:#fff;
+			}
+		}
+		tbody{
+			tr.cart_item{
+				.product-thumbnail{
+					a{
+						img{
+							width: 65px;
+						}
+					}
+				}
+				.product-subtotal,
+				.product-price,
+				.product-name{
+					@extend .p5;
+					a{
+						font-size: inherit;
+					}
+				}
+				.product-quantity{
+					@extend .p5;
+					.quantity{
+						input{
+						  font-size: inherit;
+							height:35px;
+						}
+					}
+				}
+				.product-remove{
+					a{
+						@extend .p5;
+						color:$grey-dark !important;
+						line-height: 1;
+						&:hover{
+							background:$grey-dark;
+							color:#fff !important;
+						}
+					}
+				}
+			}
+			tr .actions{
+				.back{
+					.button{
+						background-color: $teal;
+						@extend .h4;
+						text-transform: uppercase;
+						color:#fff;
+					}
+				}
+				input.button{
+					background-color: $teal;
+					@extend .h4;
+					text-transform: uppercase;
+					color:#fff;
+				}	
+			}
+		}
+	}
+	.cart-collaterals{
+		.cart_totals{
+			.shop_table{
+				@extend .p5;
+				
+			}
+			.wc-proceed-to-checkout{
+				.checkout-button{
+					@extend .h4;
+					background-color: $teal;
+					text-transform: uppercase;
+					color:#fff;
+				}
+			}
+		}
+	}
+}

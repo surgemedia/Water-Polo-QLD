@@ -1,0 +1,87 @@
+.woocommerce {
+.woocommerce-breadcrumb {
+  display:none;
+}
+.pagingation-nav,
+.woocommerce-pagination {
+  background: $color4;
+  ul.page-numbers {
+  float:left;
+  border:0px;
+  margin: 0px;
+  padding: 0;
+  li { border:0px;
+    font-size: 1.4em;
+  }
+    span {
+      margin-top: 0.8em;
+      border:2px solid #fff;
+      color:#fff;
+      &.current {
+        background: transparent;
+        color:#fff;
+
+      }
+    }
+    a { border:0px;
+    margin-top: 0.9em;
+    color:#000;
+  }
+    a.next,
+    a.previous {
+      border:0px;
+      margin-top: 0px;
+      text-transform: uppercase;
+      box-shadow: none;
+      background-color: $teal;
+      font-weight:bold;
+      color:#fff;
+      padding:1.3em 4em;
+    }
+  }
+}
+
+.woocommerce-MyAccount-navigation {
+    list-style: none;
+    ul { 
+    list-style: none;
+    text-align: left;
+    font-size: 2em;
+     li {
+    padding: 1em 0 0 0;
+    }
+  }
+}
+
+
+ul.products {
+    .product.type-product {
+        @extend .col-sm-6;
+        padding-top:4em;
+        padding-bottom:4em;
+
+        text-align: center;
+        margin-right:0px;
+      a {
+        img {
+          border-radius: 100%;
+          overflow: hidden;
+          @extend .col-sm-6;
+          margin-right: 1em;
+        }
+      }
+      .wrapper {
+        color:$grey-dark;
+        text-align: center;
+        .price { display:none} //Dont thing we should do this.
+        p {
+          color:$grey-dark;
+        }
+      }
+      .add_to_cart_button {
+        @extend .btn;
+        float:none;
+      }
+    }
+  }
+}

@@ -10,6 +10,9 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
+
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -19,10 +22,14 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+
       }
+      
     },
     // Home page
     'home': {
@@ -33,6 +40,7 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
+
     // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
@@ -78,10 +86,26 @@
   = Enabling multi-level navigation =
   ===============================================*/
   $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-      event.preventDefault(); 
-      event.stopPropagation(); 
+      event.preventDefault();
+      event.stopPropagation();
       $(this).parent().siblings().removeClass('open');
       $(this).parent().toggleClass('open');
+  });
+  $('#sponsors .owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:3
+          }
+      }
   });
 
 $('.owl-carousel').owlCarousel({
@@ -89,7 +113,7 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     nav:true,
     responsive:{
-        0:{ 
+        0:{
             items:1
         },
         600:{
@@ -100,5 +124,71 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+  $('.homepage-heading.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+  });
+
+$('.oembed .placeholder.video').on('click', function(event) {
+      $(this).addClass('playing');
+});
+
+$('.close-tab').on('click',function(event){
+  event.preventDefault();
+  $(this).parent().removeClass('active');
+  $(".nav-tabs li").removeClass('active');
+});
+
+$("[data-toggle='reveal']").on('click',function(event){
+    event.preventDefault();
+    var id = $(this).attr("href");
+    var show= $(this).parents(".card").siblings(".show-reveal");
+    $(this).remove();
+    $(id).clone().appendTo(show);
+
+});
 
 })(jQuery); // Fully reference jQuery after this point.
+
+(function($) {
+  $(document).ready(function(){
+   
+function popGallery(id){
+          $('#'+id+' button').on('click', function (event) {
+            event.preventDefault();
+            var options = {
+              container: '#'+id+' .blueimp-gallery'
+            };
+            blueimp.Gallery($('#'+id+' .links a'), options);
+          })
+        };
+
+
+var windowObjectReference;
+function openRequestedPopup(button) {
+  windowObjectReference = window.open(
+     button.dataset.target,
+    "DescriptiveWindowName",
+    "resizable,scrollbars,status,navigator"
+  );
+}
+
+ });
+
+
+
+
+}(jQuery));
+

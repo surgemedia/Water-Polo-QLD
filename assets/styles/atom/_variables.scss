@@ -4,23 +4,30 @@ $icon-font-path:        "../fonts/";
 // Grid settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
-
+$grid-float-breakpoint: 992px;
+ 
 // Colors
 $brand-primary:         #2795B6;
-$teal:					#2795B6;
-$color1: $teal;
-$teal-alt: 				#00506B;
-$teal-dark: 			#003E4D;
-$blue: 					#12B5C6;
-$light-blue: 			#86B9BD;
-$yellow: 				#D8D001;
-$red: 					#8b1f2c;
+$color1: #8b0e04;
+$color2: #f33729;
+$color3: #adafb2;
+$color4: #0eb9cb;
+$color5: #027481;
+$color6: #303a3a;
 
-$yellow-dark: 			#3D4000; 
-$grey: 					#F6F6F6;
-$grey-dark: 					#9A9A9A; 
+$red : $color2;
+$red-dark : $color1;
+$blue: $color4;
+$teal: $color5;
+$grey: $color3;
+$grey-dark: $color6;
 $gray : $grey;
 
-$primary-font: "Klavika Basic","Helvetica","Arial","sans-serif";
-$secondary-font: "Roboto Slab","Helvetica Neue","Helvetica","Arial","sans-serif";
-$thin-font: 'Klavika Basic Light',"Helvetica","Arial","sans-serif";
+$primary-font: "PT Sans","Helvetica","Arial","sans-serif";
+$secondary-font: "PT Sans","Helvetica Neue","Helvetica","Arial","sans-serif";
+$thin-font: 'PT Sans',"Helvetica","Arial","sans-serif";
+
+$play-icon: '';
+$facebook-icon: '';
+$twitter-icon: '';
+

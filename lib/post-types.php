@@ -12,6 +12,7 @@
 	//Define post typ
 	$events->register_taxonomy([
 	    'taxonomy_name' => 'event_category',
+	    'plural' => 'event categories',
 	]);
 	
 	if( function_exists('acf_add_local_field_group') ):
@@ -264,6 +265,8 @@ endif;
 	//Define post type
 	$testimonials->register_taxonomy([
 	    'taxonomy_name' => 'testimonial_category',
+	    'plural' => 'testimonial categories',
+
 	]);
 	}
 
@@ -279,7 +282,24 @@ endif;
 	//Define post type
 	$testimonials->register_taxonomy([
 	    'taxonomy_name' => 'representative_teams_category',
+	    'plural' => 'Representative Teams categories',
+
 	]);
+	}
+
+/*=============================
+=            TEAMS            =
+=============================*/
+
+	if($cpt_enabled['galleries']){
+	$testimonials = new CPT([
+	    'post_type_name' => 'gallery',
+	    'plural' => 'Galleries',
+
+	]);
+	$testimonials->menu_icon("dashicons-format-gallery");
+	//Define post type
+
 	}
 
 
@@ -293,100 +313,10 @@ endif;
 	]);
 	$testimonials->menu_icon("dashicons-groups");
 	//Define post type
-	$testimonials->register_taxonomy([
-	    'taxonomy_name' => 'club_category',
-	]);
-	if( function_exists('acf_add_local_field_group') ):
+	// $testimonials->register_taxonomy([
+	//     'taxonomy_name' => 'club_category',
+	//     'plural' => 'Club categories',
 
-acf_add_local_field_group(array (
-	'key' => 'group_578877343cec9',
-	'title' => 'Clubs',
-	'fields' => array (
-		array (
-			'key' => 'field_5788773b5fa5a',
-			'label' => 'Logo',
-			'name' => 'logo',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array (
-			'key' => 'field_578877525fa5b',
-			'label' => 'Additional Image',
-			'name' => 'additional_image',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array (
-			'key' => 'field_578877e25fa5c',
-			'label' => 'Map',
-			'name' => 'map',
-			'type' => 'google_map',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'center_lat' => '',
-			'center_lng' => '',
-			'zoom' => '',
-			'height' => '',
-		),
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'club',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'acf_after_title',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
 
-endif;
+	// ]);
 	}

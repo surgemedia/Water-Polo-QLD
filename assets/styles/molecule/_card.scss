@@ -1,0 +1,115 @@
+.card.molecule {
+		@extend .pattern-bg;
+		&:before {
+			left:0px;
+		}
+		text-align: center;
+	//core styles
+		.wrapper {
+			margin:0px auto;
+			padding:4em 1em;
+			// width:90%;
+			float:none;
+			display:block;
+		}
+		img { }
+		hgroup { width:75%; margin:0 auto; }
+		h1 { }
+		h6 { }
+		p { 
+			margin:0px auto;
+			width:90%;
+		}
+		&.min-height {
+			    min-height: 570px;
+		}
+		//color varities
+		&.white-bg { .btn { }}
+		&.red-dark-bg { .btn { }}
+		&.red-bg { .btn { }}
+		&.grey-light-bg { .btn { }}
+		&.grey-bg { .btn { }}
+		&.blue-bg { .btn { }}
+		&.teal-bg {}
+
+	//aditional
+	&.style1 {
+		.wrapper{
+			padding:2em;
+		}
+
+			img { }
+		hgroup { }
+			h1 { font-size: 4em; padding:1em; }
+			h6 { }
+	}
+	&.style2 {
+			img { }
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.style3 {
+			img { }
+		hgroup { }
+			h1 { }
+			h6 { }
+	}
+	&.product {
+		.wrapper {
+			padding-top: 0px;
+		}
+		h1 {
+			@extend .h2;
+			margin-top: 0px;
+		}
+	}
+	&.club {
+		overflow: hidden;
+		&:before {
+			display:none;
+		}
+		text-align: center;
+		 color:#fff;
+		.wrapper {
+			padding-top:3em; 
+		}
+			img {
+				margin:0 auto;
+			}
+		 h1 { @extend .h2; margin-bottom: 1em; color:#fff;}
+		 p { font-size:1.6em;
+			 margin-bottom: 0.3em;
+		 }
+		 &.grey-light-bg {
+			 color:#000;
+			 h1,p {
+				 color:#000; 
+			 }
+		 }
+		 &.grey-bg {
+			 color:#fff;
+			 h1,p {
+				 color:#fff;
+			 }
+		 }
+	}
+	&.lightbox {
+		.wrapper {
+			text-align: center;
+		hgroup { 
+			width:100%; 
+			h1 {
+				padding:0px;
+			}
+		}
+		img {
+			    max-height: 330px;
+    float: none;
+    margin: 0 auto;
+		}
+		padding-bottom:6em;
+		}
+
+	}
+}

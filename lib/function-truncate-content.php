@@ -2,7 +2,7 @@
 /*=========================================
 =            Truncated Content           =
 =========================================*/
-function get_truncate($content,$cap,$ellipsis) {
+function truncate($content,$cap,$ellipsis="",$echo=true) {
 	//get the content 
 	$tail = NULL;
 	$b4trunk = explode(' ', $content);
@@ -14,5 +14,9 @@ function get_truncate($content,$cap,$ellipsis) {
 	} 
 	//kinda like serving a cake : you explode it, cut it up, and serve it on a plate
 	$trunk = strip_tags($truck_string).$tail; 
-	return $trunk; 
+	if($echo == true){
+	echo $trunk; 
+	} else {
+		return $trunk;
+	}
 }

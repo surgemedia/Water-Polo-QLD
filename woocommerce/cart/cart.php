@@ -131,7 +131,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 		?>
 		<tr>
 			<td colspan="6" class="actions">
-
+			<div  class="back  pull-left">
+       <a class="button" href="<?php echo get_permalink(woocommerce_get_page_id( 'shop' )); ?>"> <i class="icon-back"></i> Keep Shopping</a>
+      </div>
 				<?php if ( wc_coupons_enabled() ) { ?>
 					<div class="coupon">
 

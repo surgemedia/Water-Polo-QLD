@@ -1,51 +1,154 @@
-
+		#bs-example-navbar-collapse,
 			#bs-example-navbar-collapse-1 {
 				display:inline-block !important;
-				
+				padding:0px;
+				width:100%;
+
 			}
+#navbar {
+	padding: 0px;
+}
 .banner {
-		background: #000;
-	    display: block;
+		background: $teal;
+	    display: inline-block;
+	    width:100%;
+	    position:relative;
 			a.brand {
 			    color:#fff;
 			    display: inline-block;
 			    font-size: 2em;
 			    margin-top:0.3em;
-			    padding:1.4em;
+			    padding:4em 1.4em;
 			    overflow:hidden;
 			    font-weight: bold;
+
+
+			}
+			#logowrapper {
+				position: absolute;
+		    left: 0px;
+		    height: 100%;
+		    z-index: 999;
+		    min-width:170px;
 			}
 			nav {
 				display:inline-block;
+				 text-align: left;
+				 min-height: 90px;
+			   .navbar-nav {
+			      width:97%;
+			      text-align: left;
+			      float:right;
+			    }
 					li {
 			    display: inline-block;
 			    float: none;
 							a {
-					    padding: 1.2em;
-					    color:#fff;
+					      padding: 2.3em 2.2em;
+					    color: #fff;
 					    display: inline-block;
-					    font-size: 2em;
-					    overflow: hidden;
-					    	
+					    font-size: 1.5em;
+					    font-weight: bold;
+					    text-transform: uppercase;
+							position: relative;
 					    &:hover {
-					    	color:#000;
+					    	color:#fff;
+								background-color: transparent;
+								&:after {
+									height:5px;
+									background-color:#fff;
+									width:100%;
+									bottom:0px;
+									left:0px;
+									position:absolute;
+									content:"";
+								}
 					    }
 					}
+					.nav .open>a {
+							background-color:$red-dark;
+					}
 					 .dropdown-menu {
-						    	
+						 			padding:0px;
+									margin:0px;
 						    	font-size:1em;
-						    	background: #000;
+						    	background: transparent;
 						    	min-width:auto;
-						    	li { 
+
+						    	li {
 						    		width:100%;
 						    		clear:both;
 						    	}
+									a {
+											background:$grey-dark;
+			    						width:100%;
+									}
 						    	 a:hover {
-								    	background:transparent;
-								    	color:$color1;
+								    	background:$red-dark;
+								    	color:#fff;
 								    	min-width:auto;
 								    }
 					    }
 			}
 	}
+}
+#loginPopup {
+    position: absolute;
+    right: 0px;
+    height:100%;
+    right:0px;
+    padding: 3.8em 2.5em;
+    color: #fff;
+		 a {
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	    padding: 2em 0;
+		}
+}
+#shopPopup {
+		background: #fff;
+    position: absolute;
+    height:102%;
+    right:0px;
+    top: 0;
+    padding: 1.55em 2.45em;
+    color: $red-dark;
+    background-color: #fff;
+    border: 0px;
+		 .trigger,a {
+	    color: $red-dark;
+	    text-transform: uppercase;
+	    font-size: 5em;
+	    font-weight: 700;
+	    padding: 0em;
+	   	background-color: transparent;
+	   	border:0px;
+	    display: inline-block;
+		}
+		&.open {
+			 box-shadow: none;
+		.trigger {
+		    box-shadow: none;
+		    color: #000;
+			}
+		}
+		ul.dropdown-menu {
+			    left: auto;
+		    border-radius: 0px;
+		    right: 0px;
+		    border: 0px;
+		    margin: 0px;
+    	 li {
+    	width: 100%;
+    	text-align: right;
+    	 a {
+			    font-size: 1em;
+			    display: block;
+			    padding: 1em;
+			    overflow: hidden;
+    	 }
+			}
+		}
 }

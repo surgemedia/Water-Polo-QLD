@@ -2,10 +2,12 @@
     <?php
       foreach ($vars['element'] as $key => $value) { ?>
       <?php //debug($vars); ?>
-     <div class="slide" style="background-image: url('<?php echo $value['background'] ?>');">
-       <?php  get_component([ 'template' => 'molecule/card',
+     <div class="slide" >
+     
+       <?php  get_component([ 'template' => 'molecule/card-homepage',
+                         'remove_tags' =>  $value['remove_elements'],
                          'vars' => [
-                               "class" => 'container card',
+                               "class" => 'card col-md-4 pull-right blue-bg pattern-bg',
                                "title" => $value['title'],
                                "subtitle" => $value["subtitle"],
                                 "image" => $value["image"],
@@ -14,7 +16,10 @@
                                ]
                           ]);?>
       </div>
+      <div class="dotcontainer">
+      </div>    
       <?php }
     ?>
 
 </section>
+

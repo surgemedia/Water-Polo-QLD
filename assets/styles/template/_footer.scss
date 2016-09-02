@@ -1,8 +1,39 @@
 #footer {
 	width:100%;
-	padding:2em;
-	background:#000;
+	padding:2em 4em;
+	background:$red-dark;
 	color:#fff;
 	text-align:center;
 	font-size:1.3em;
+	#footer_logo {
+		clear:both;
+		display:inline-block;;
+		margin-bottom: 1em;
+	}
+	#footer_logo +	span {
+	clear: both;
+	width: 100%;
+	display: block;
+	line-height: 1.7;
+	}
+	#footermenu {
+		margin-top:2em;
+		ul {
+			color:#fff;
+			li {
+				display: inline-block;
+				margin:0px;
+				a {
+					margin:0px;
+					border-right:1px solid #fff;
+					color:#fff;
+					padding: 0px 1em;
+					overflow: hidden;
+				}
+				&:last-child a {
+					border: 0px;
+				}
+			}
+		}
+	}
 }
