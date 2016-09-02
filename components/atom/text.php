@@ -1,1 +1,0 @@
-<p class="<?php echo $vars['class'] ?>"><?php echo $vars['content'] ?></p>
