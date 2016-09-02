@@ -1,4 +1,7 @@
 .woocommerce {
+  a {
+    color:$teal;
+  }
 .woocommerce-breadcrumb {
   display:none;
 }
@@ -84,4 +87,18 @@ ul.products {
       }
     }
   }
+}
+
+.woocommerce-info,
+.woocommerce-message {
+  &:before {
+    color:$teal;
+  }
+    font-size: 2em;
+    border-top-color: $teal;
+    .button {
+      @extend .btn;
+      background-color:$red;
+      border-radius:0px;
+    }
 }

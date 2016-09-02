@@ -36,7 +36,8 @@ if ( $myaccount_page_id ) {
 }
  ?>
   <div id="loginPopup" class=" red-dark-bg padding-2 hidden-xs hidden-sm">
-     <a href="<?php echo $myaccount_page_url; ?>">Sign In</a>
+    <?php $loginPopuptext; if(is_user_logged_in()){ $loginPopuptext = 'Account'; } else { $loginPopuptext = 'Sign In';} ?>
+     <a href="<?php echo $myaccount_page_url; ?>"><?php echo $loginPopuptext; ?></a>
    </div>
  <?php } ?>
       </nav>
@@ -48,9 +49,7 @@ if ( $myaccount_page_id ) {
       ?>
 <?php if(class_exists( 'WooCommerce' ) ){ ?>
     <div id="shopPopup" class=" white-bg padding-2 hidden-xs hidden-sm">
-
        <a href="<?php echo get_permalink(woocommerce_get_page_id( 'cart' )); ?>"> <i class="icon-shopping-cart"></i></a>
-
       </div>
     <?php } else { ?>
   <div id=shopPopup class="btn-group" role="group">
@@ -66,7 +65,6 @@ if ( $myaccount_page_id ) {
        <?php } ?>
         </ul>
       </div>
-
       <?php } ?>
     </nav>
     </div>

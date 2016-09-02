@@ -31,6 +31,11 @@
 		    z-index: 999;
 		    min-width:170px;
 			}
+			.nav {
+				.open>a {
+						    background: $blue;
+						}
+			}
 			nav {
 				display:inline-block;
 				 text-align: left;
@@ -40,6 +45,9 @@
 			      text-align: left;
 			      float:right;
 			    }
+			   	.open>a {
+						    background: $blue;
+						}
 					li {
 			    display: inline-block;
 			    float: none;
@@ -65,9 +73,7 @@
 								}
 					    }
 					}
-					.nav .open>a {
-							background-color:$red-dark;
-					}
+				
 					 .dropdown-menu {
 						 			padding:0px;
 									margin:0px;

@@ -1,5 +1,5 @@
 <?php
-		// debug($vars);
+		 //debug($vars);
 			/*=============================================
 			= Card (Class,Image,Title,Content)
 			= @components
@@ -9,7 +9,7 @@
 												'vars' => [
 															"class" => 'col-md-2 pull-left',
 															"image" => $vars['left']['image'],
-															"image_position" => $vars['left']['']
+															"image_position" => $vars['left']
 												]
 											 ]);
 ?>
@@ -21,14 +21,14 @@
 				+ molecule/card-img-side
 			=============================================*/
 			get_component([ 'template' => 'molecule/card',
-							'remove_tags' =>  $vars['card_remove_elements'],
+										'remove_tags' =>  $vars['card']['remove_elements'],
 											'vars' => [
 														"class" => 'col-md-8 card',
 														"title" => $vars["card"]['title'],
 														"subtitle" => $vars["card"]["subtitle"],
 														"content" => apply_filters('the_content',  $vars["card"]["content"]),
 														"image" => $vars['card']['image'],
-														"button" => $vars['card']['button']
+														"button" => $vars['card']['button_list']['button']
 														]
 											 ]);
 ?>
@@ -37,7 +37,7 @@
 												'vars' => [
 															"class" => 'col-md-2 pull-right',
 															"image" => $vars['right']['image'],
-															"image_position" => $vars['right']['']
+															"image_position" => $vars['right']
 												]
 											 ]);
 ?>

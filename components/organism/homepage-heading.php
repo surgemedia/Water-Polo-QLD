@@ -7,17 +7,15 @@
        <?php  get_component([ 'template' => 'molecule/card-homepage',
                          'remove_tags' =>  $value['remove_elements'],
                          'vars' => [
-                               "class" => 'card col-md-4 pull-right blue-bg pattern-bg',
+                               "class" => 'card col-md-4 pull-right pattern-bg '.$value['background_color'] ,
                                "title" => $value['title'],
                                "subtitle" => $value["subtitle"],
                                 "image" => $value["image"],
                                "content" => apply_filters('the_content',  $value["content"]),
-                               "button" => $value['button']
+                               "button" => $value['button_list']['button']
                                ]
                           ]);?>
-      </div>
-      <div class="dotcontainer">
-      </div>    
+      </div> 
       <?php }
     ?>
 

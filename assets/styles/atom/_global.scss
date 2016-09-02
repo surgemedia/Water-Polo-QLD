@@ -38,8 +38,11 @@ h2,
 	font-size:1.8em;
 	font-weight:400;
 }
-
-p {
+h6 {
+	font-size:2.8em;
+	font-weight:bold;
+}
+p,.p1 {
 	font-family:$secondary-font;
 	font-weight:400;
 	font-size:2.1em;
@@ -49,7 +52,7 @@ p {
 // h2,.h2 { font-size:6em;   }
 
 
-.p1 { font-size:6em; line-height:1.7em;  }
+// .p1 { font-size:6em; line-height:1.7em;  }
 .p2 { font-size:4.8em; line-height:1.7em;}
 .p3 { font-size:3.6em; line-height:1.7em;  }
 .p4 { font-size:3em; line-height:1.7em;  }
@@ -116,32 +119,32 @@ section {
 
 
 .red-dark-bg {background-color:$color1;
-		h1,h2,h3,.h1,.h2,.h3 { color:#fff;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:#fff;}
 		p,li { color:#fff; }
 }
 .red-bg {background-color:$color2;
-		h1,h2,h3,.h1,.h2,.h3 { color:#fff;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:#fff;}
 		p,li { color:#fff; }
 }
 .grey-light-bg {background-color:$color3;
-		h1,h2,h3,.h1,.h2,.h3 { color:$color6;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:$color6;}
 		p,li { color:$color6; }
 }
 .grey-bg { background-color:$color6;
-		h1,h2,h3,.h1,.h2,.h3 { color:#fff;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:#fff;}
 		p,li { color:#fff; }
 }
 .blue-bg {background-color:$color4;
-		h1,h2,h3,.h1,.h2,.h3 { color:#fff;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:#fff;}
 		p,li { color:#fff; }
 }
 .teal-bg {background-color:$color5;
-		h1,h2,h3,.h1,.h2,.h3 { color:#fff;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:#fff;}
 		p,li { color:#fff; }
 }
 .white-bg {
 		background-color:#fff;
-		h1,h2,h3,.h1,.h2,.h3 { color:$color6;}
+		h1,h2,h3,h6,.h1,.h2,.h3 { color:$color6;}
 		p,li { color:$color6; }
 		.btn {
 			color:#fff;

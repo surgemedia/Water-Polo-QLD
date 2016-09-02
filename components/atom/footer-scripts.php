@@ -1,3 +1,4 @@
+
 <script>
 function popGallery(id){
           jQuery('#'+id+' .wrapper').on('click', function (event) {

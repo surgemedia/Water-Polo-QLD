@@ -10,8 +10,8 @@
 </div>
 <article class="<?php echo $vars['class'] ?> molecule card-img-side">
 	<hgroup>
-		<h6><?php echo $vars["subtitle"]?></h6>
 		<h1><?php echo $vars["title"]?></h1>
+		<h6><?php echo $vars["subtitle"]?></h6>
 	</hgroup>
 	<?php echo apply_filters('the_content',  $vars["content"]); ?>
 			<?php 
