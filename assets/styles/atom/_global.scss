@@ -167,3 +167,20 @@ section {
 		z-index: 1;
 	}
 }
+
+.time-info{
+	font-family:$secondary-font;
+	font-weight:400;
+	font-size:2.1em;
+	line-height:1.7em;
+	color:$color3;
+}
+.contact-info{
+	ul{
+		font-family:$secondary-font;
+	font-weight:400;
+	font-size:2.1em;
+	line-height:1.7em;
+	color:$color3;
+	}
+}

@@ -1,0 +1,29 @@
+//Checkout Page Style
+.woocommerce{
+	.checkout{
+		.shop_table{
+			font-size: 2.1em;
+		}
+	}
+	#payment{
+		background:0;
+		background-color: #fff;
+		div.payment_box{
+			background-color: $grey-dark;
+			p{
+				color:#fff;
+			}
+			&:before{
+				border-bottom-color: $grey-dark;
+			}
+		}
+		.place-order{
+			.button{
+				@extend .h4;
+				background-color: $red-dark;
+				text-transform: uppercase;
+				color:#fff;
+			}
+		}
+	}
+}
