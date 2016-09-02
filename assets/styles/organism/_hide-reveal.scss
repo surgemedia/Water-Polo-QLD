@@ -7,7 +7,7 @@
 		flex:1;
 
 		.wrapper {
-		min-height: 480px; 
+		min-height: 400px; 
 		p {
 			overflow: hidden; 
 			max-height: 210px; 
@@ -41,7 +41,7 @@
 	} */
 	.nav.nav-tabs{
 		.card{
-
+			
 			.wrapper{
 				padding: 0;
 				img{
@@ -60,7 +60,7 @@
 				}
 				a.btn{
 			    position: absolute;
-			    bottom: -3em;
+			    bottom: -2em;
 			    left: 0;
 			    right: 0;
 			    width: 180px;
@@ -80,7 +80,9 @@
 	    z-index: 2;
 
 	    .card {
-
+			&:before {
+							display:none;
+						}
 	    }
 
 			.close-tab{

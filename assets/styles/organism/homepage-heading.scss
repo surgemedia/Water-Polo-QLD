@@ -1,4 +1,6 @@
 .homepage-heading {
+   max-height:480px;
+        overflow: hidden;
   .owl-stage {
     .owl-item {
       .slide {
@@ -8,7 +10,13 @@
         padding:0px;
         margin:0px;
        }
+       .col-md-8{
+        overflow: hidden;
+        max-height:480px;
+        overflow: hidden;
+       }
        article {
+      
         &:before {
           left:0px;
           z-index:-1;

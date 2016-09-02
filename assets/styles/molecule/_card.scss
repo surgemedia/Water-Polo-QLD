@@ -39,6 +39,9 @@
 
 	//aditional
 	&.style1 {
+		&:before {
+			display:none;
+		}
 		.wrapper{
 			padding:2em;
 		}
@@ -61,6 +64,9 @@
 			h6 { }
 	}
 	&.product {
+		&:before{
+			display:none;
+		}
 		.wrapper {
 			padding-top: 0px;
 		}
