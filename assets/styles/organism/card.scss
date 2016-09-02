@@ -4,12 +4,15 @@
 		.wrapper {
 			margin:0px;
 			// padding:0px;
+			li {
+			@extend .p1;
+			}
 		}
 		img { } 
 		hgroup { }
 		h1 { }
 		h6 { }
-
+		
 
 	//color varities
 		.white-bg {}

@@ -11,6 +11,10 @@
 			// width:90%;
 			float:none;
 			display:block;
+		
+		}
+		li {
+			@extend .p1;
 		}
 		img { }
 		hgroup { width:75%; margin:0 auto; }
