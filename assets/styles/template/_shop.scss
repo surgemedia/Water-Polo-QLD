@@ -1,0 +1,25 @@
+//Shop Styles
+ul.products{
+	li{
+		.added_to_cart{
+			@extend .icon-font;
+			background: #8b0e04;
+	    color: #fff;
+	    border-radius: 0;
+	    font-weight: 700;
+	    padding: 0.5em .5em;
+	    vertical-align: bottom;
+	    width: 47px;
+	    color: transparent;
+	    font-size: 2.28em;
+	    line-height: 1;
+			&:before{
+				@extend .icon-shopping-cart:before;
+				color:#fff;
+			}
+		}
+		.add_to_cart_button:focus{
+			color:#fff;
+		}
+	}
+}

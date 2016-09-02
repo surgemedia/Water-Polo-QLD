@@ -1,0 +1,39 @@
+.homepage-heading {
+  .owl-stage {
+    .owl-item {
+      .slide {
+        overflow: hidden;
+        position: relative;
+        div {
+        padding:0px;
+        margin:0px;
+       }
+       article {
+        &:before {
+          left:0px;
+          z-index:-1;
+        }
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        overflow: hidden;
+        text-align: center;
+        z-index: 9;
+       }
+      }
+    }
+  }
+  .owl-nav {
+    display: none;
+    div {
+      &.owl-prev {}
+      &.owl-next {}
+    }
+  }
+  .owl-dots {
+    position:absolute;
+    top:0px;
+    left:0px;
+    span {}
+  }
+}

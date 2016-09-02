@@ -1,0 +1,49 @@
+.btn {
+//core
+	background:$red-dark;
+	color:#fff;
+	border-radius:0px;
+	@extend .h4;
+	font-weight:bold;
+	padding-left:2em;
+	padding-right:2em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	&:hover {
+		background:#000;
+			color:#fff;
+	}
+&.default {
+	.btn {
+		color:#fff;
+	}
+
+}
+//red
+&.red {
+	background:$red;
+	color:#fff !important;
+	border-radius:0px;
+}
+&.teal {
+	background:$teal;
+	color:#fff;
+	border-radius:0px;
+}
+&.white {
+	background:#fff;
+	color:$color6;
+	border-radius:0px;
+}
+&.blue {
+	background:$blue;
+	color:#fff;
+	border-radius:0px;
+}
+
+
+.btn + .btn {
+    margin-left: 0.5em;
+}
+
+}

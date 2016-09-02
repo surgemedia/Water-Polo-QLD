@@ -1,0 +1,114 @@
+@import "atom/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+// endbower
+
+/*============================
+=            Atom            =
+============================*/
+@import "atom/fonts";
+@import "atom/global";
+@import "mixin/tri";
+
+// @import "atom/wireframe-styles";
+
+
+/*================================
+=            Molecule            =
+================================*/
+@import "molecule/buttons";
+@import "molecule/comments";
+@import "molecule/forms";
+@import 'molecule/calendar';
+@import 'molecule/card';
+@import 'molecule/card-img-side';
+@import 'molecule/image';
+@import 'molecule/image-grid';
+@import 'molecule/img-text';
+@import 'molecule/list';
+@import 'molecule/map';
+@import 'molecule/oembed';
+@import 'molecule/page-header';
+@import 'molecule/related-items';
+@import 'molecule/slider';
+@import 'molecule/tabs';
+@import 'molecule/social-feed';
+@import 'molecule/events';
+
+
+/*================================
+=            Organism            =
+================================*/
+@import 'organism/big-column-small-column';
+@import 'organism/card';
+@import 'organism/angled-card';
+
+@import 'organism/comments';
+@import 'organism/contact';
+@import 'organism/floating';
+@import 'organism/four-columns';
+@import 'organism/homepage-heading';
+@import 'organism/image-grid';
+@import 'organism/one-column';
+@import 'organism/page-heading';
+@import 'organism/related-items';
+@import 'organism/sidebar';
+@import 'organism/slider';
+@import 'organism/small-column-big-column';
+@import 'organism/three-columns';
+@import 'organism/two-columns';
+@import 'organism/media-block';
+@import 'organism/hide-reveal';
+
+
+/*=================================
+=            Templates            =
+=================================*/
+@import "template/header";
+@import "template/cart";
+@import "template/shop";
+@import "template/sidebar";
+@import "template/footer";
+@import "template/pages";
+@import "template/posts";
+@import "template/tinymce";
+@import "template/woocommerce";
+
+
+/*----------  RESPONSIVE  ----------*/
+
+
+@media (max-width: $screen-sm-max) {
+	@import "res/_res-xs-sm.scss";
+}
+@media (max-width: $screen-xs-max) {
+	@import "res/_res-xs.scss";
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@import "res/_res-sm.scss";
+}
+// @media (min-width: $screen-md-min) and (max-width: $screen-md-max)  {
+// 	@import "res/_res-md-lg.scss";
+// }
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@import "res/_res-md.scss";
+}
+/* Portrait */
+@media (min-width: $screen-md-max) and (max-device-width: 800px) {
+	@import "res/_res-800-portrait.scss";
+}
+@media (min-width: $screen-lg-min) {
+	@import "res/_res-lg.scss";
+}
+@media (min-width: $screen-lg-min) and (max-width: 1439px) {
+	@import "res/_res-lg-1440.scss";
+}
+@media (min-width: 1440px){
+	@import "res/_res-1440.scss";
+}
+@media (min-width: 1028px) and (max-width: 1352px){
+	@import "res/_res-1028.scss";
+}
