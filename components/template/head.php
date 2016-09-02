@@ -14,5 +14,5 @@
   <?php wp_head(); ?>
   <?php echo get_field('bugherd','option'); ?>
   <?php echo get_field('google_analytics','option'); ?>
-
+<script src="http://maps.google.com/maps/api/js?sensor=true&amp;libraries=places&amp;key=AIzaSyAVP5QwWp9NU2acObo2PUxLaUzAp4dEoBU" type="text/javascript"></script>
 </head>
