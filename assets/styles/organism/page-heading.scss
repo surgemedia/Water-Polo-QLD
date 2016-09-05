@@ -13,7 +13,8 @@
       margin-bottom: 0.8em;
     }
     li {
-      @extend .p1;
+      @extend .p1; 
+      color:#000;
     }
     p {
       @extend .col-sm-8;

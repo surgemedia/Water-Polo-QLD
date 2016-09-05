@@ -1,15 +1,24 @@
-<?php //debug($vars) ?>
+
 <div class="<?php echo $vars['class'] ?> molecule image-grid ">
-  <ul class="list-inline">
-        <?php
-
+ <?php
         foreach ($vars['image_list'] as $item) {?>
-          <li class='col-md-<?php echo $vars['column_number']?>' >
-            <img class="img-responsive" alt="<?php echo  $item['description']; ?>" src="<?php echo $item['image']; ?>"></img>
-            <small class="text-center col-xs-12"><?php echo  $item['description']; ?></small>
-          </li>
-        <?php }
+                  <?php
+                  // debug($vars);
+              get_component([ 'template' => 'molecule/card',
+                            'remove_tags'=> $item['remove_elements'],
+                            'vars' => [
+                                  "class" => 'card '.get_field('product_color').' col-md-'.$vars['column_number'],
+                                  "title" =>  $item['title'],
+                                  "subtitle" =>  $item['subtitle'],
+                                  "image" =>  $item['image'],
+                                  "content" =>  $item['content'],
+                                  "button_list" =>  $item['button_list']
+                                            
 
-        ?>
+                                  ]
+                             ]);
+?>
+          
+        <?php } ?>
       </ul>
 </div>
