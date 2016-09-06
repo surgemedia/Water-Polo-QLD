@@ -149,3 +149,34 @@ button.navbar-toggle {
     }
   }
 } 
+
+.angled-card {
+  .card {
+  &:after {
+    display:none;
+  }
+  &:before {
+    display:none;
+  }
+  }
+  .image {
+    display:none;
+  }
+}
+
+.media-block {
+  display: block;
+  flex-wrap: none;
+  background:#fff;
+  .col-md-3 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-block;
+    flex: none;
+    * {
+      // display:block;
+    }
+  }
+}
