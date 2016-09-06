@@ -171,3 +171,28 @@ button.navbar-toggle {
     display:none;
   }
 }
+
+.homepage-heading {
+  max-height:none;
+  .owl-item {
+      .slide {
+        height:70vh;
+        img {
+          width:100%;
+        }
+        .card {
+          height: 60%;
+          position: absolute;
+          right: 0;
+          overflow: hidden;
+          text-align: center;
+          z-index: 9;
+          font-size: 0.7em;
+          width:100%;
+        }
+      } 
+    }
+    .owl-dots {
+      width: 100%;
+    }
+}

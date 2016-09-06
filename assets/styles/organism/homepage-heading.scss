@@ -39,9 +39,23 @@
     }
   }
   .owl-dots {
-    position:absolute;
-    top:0px;
-    left:0px;
-    span {}
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    width: 33%;
+    text-align: center;
+      .owl-dot {
+      height: 40px;
+      width: 40px;
+      border: 5px solid #fff;
+      border-radius: 100%;
+      display: inline-block;
+      margin: 1em;
+      background-color: rgba(256,256,256,0.1);
+      text-align: center;
+  }
+   .owl-dot.active {
+      border-color: #8b0e04;
+    }
   }
 }

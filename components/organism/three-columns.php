@@ -1,6 +1,6 @@
 <?php
 // debug($vars);	?> 
-	<div class="col-md-4">
+	<div class="col-md-4 col-xs-12">
 	<?php
 				unset($element_file);
 				unset($element_vars);
@@ -21,7 +21,7 @@
 				 ?>
 	</div>
 			
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-12">
 	<?php
 				unset($element_file);
 				unset($element_vars);
@@ -42,7 +42,7 @@
 				 ?>
 	</div>
 
-		<div class="col-md-4">
+		<div class="col-md-4 col-xs-12">
 	<?php
 				unset($element_file);
 				unset($element_vars);

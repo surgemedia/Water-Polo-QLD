@@ -3,7 +3,7 @@
 
 	
 ?>
-<div class="col-md-8 text-center">
+<div class="col-sm-8 text-center">
 <?php if(true == is_numeric($vars['image'])){  echo wp_get_attachment_image( $vars['image'], 'full', "", array( "class" => "img-responsive" ) );  } else { ?>
 		<img class="img-responsive" src="<?php echo $vars['image'] ?>" alt="">
 		<?php } ?>
