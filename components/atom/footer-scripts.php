@@ -20,17 +20,38 @@ function popGallery(id){
     }
 
 function renderCalendar(render,event_list){
- 
+  console.log(render);
   jQuery(render).fullCalendar({
     header: {
       left: 'prev,next today',
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     },
-    editable: true,
-    events: event_list
+    editable: false,
+    handleWindowResize:true,
+    events: event_list,
+    dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    eventRender: function eventRender( event, element, view ) {
+        
+        var all = ['all'];
+        var category_range = all.concat(event.category);
+        
+        return category_range.indexOf(jQuery('#type_selector').val()) >= 0
+    }
+/*    windowResize: function(view) {
+        console.log("resized: "+jQuery(window).width());
+        if (jQuery(window).width() < 514){
+            console.log("less 514");
+            jQuery(render).fullCalendar( 'changeView', 'basicDay' );
+        } else {
+            console.log("over 514");
+            jQuery(render).fullCalendar( 'changeView', 'month' );
+        }
+    }*/
   });
+
 }
+
 </script>
 <style type="text/css">
 
