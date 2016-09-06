@@ -53,8 +53,8 @@ $location = get_field('location');
 ?>
 <div class="time-info">
 	<ul class="list-inline">
-		<li><strong>Start Date: </strong><?php echo get_field("start_datetime"); ?></li>
-		<li><strong>End Date: </strong><?php echo get_field("end_datetime") ?></li>
+		<li><strong>Start Date: </strong><?php echo (new DateTime(get_field("start_datetime")))->format('d M, Y (g:i a)'); ?></li>
+		<li><strong>End Date: </strong><?php echo (new DateTime(get_field("end_datetime")))->format('d M, Y (g:i a)') ?></li>
 	</ul>
 </div>
 

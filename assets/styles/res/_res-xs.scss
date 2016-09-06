@@ -157,6 +157,19 @@ button.navbar-toggle {
       }
     }
   }
+} 
+
+/*================================
+=            Calendar            =
+================================*/
+.fc{
+  font-size: 0.7em !important;
+  .fc-event-inner{
+    font-size: 1.9vw;
+  }
+}
+
+
 }
 #posts .card {
     flex-grow:4;
