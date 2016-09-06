@@ -1,3 +1,4 @@
+<?php if ( ! post_password_required() ) { ?>
 <section class="page-heading club <?php echo $vars['class'] ?>" style="background-image:url(<?php echo get_field('additional_image'); ?>)">
 
 <div class="text-center container border-top ">
@@ -51,7 +52,14 @@
 	 ?>
 	 </div>
 </section>
-      
+<?php 
+	}else{
+	 get_component([
+								'template' => 'template/simple-page',
+								'vars' => []
+					]);
+	}
+ ?>      
 <?php 
 
 	$vars['front_page'] = get_option('page_on_front');

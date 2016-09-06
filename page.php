@@ -1,6 +1,6 @@
 
 <?php
-
+if ( ! post_password_required() ) {
 if (is_front_page()){ ?>
 <?php
 	get_component([ 'template' => 'organism/homepage-heading',
@@ -38,46 +38,52 @@ if (is_front_page()){ ?>
 <?php } ?>
 <div class="">
 <?php
-$layout_builder = get_field('layout');
-//is there block?
-if(isset($layout_builder[0])){
-foreach ($layout_builder as $key => $value) {
-	$section_file = $value['acf_fc_layout'];
-	if(isset($section_file)){
-	unset($value['acf_fc_layout']); //of section
-	//Section Options
-	$value["section"] = $section_file;
-	$value['section_data'] = get_section_options($value);
-	//Call file for display
-	echo '<section '.$value['section_data'].'>';
-	
-			get_component([
-						'template' => 'organism/'.$section_file,
-						'vars' => $value
-			]);
+	$layout_builder = get_field('layout');
+	//is there block?
+	if(isset($layout_builder[0])){
+	foreach ($layout_builder as $key => $value) {
+		$section_file = $value['acf_fc_layout'];
+		if(isset($section_file)){
+		unset($value['acf_fc_layout']); //of section
+		//Section Options
+		$value["section"] = $section_file;
+		$value['section_data'] = get_section_options($value);
+		//Call file for display
+		echo '<section '.$value['section_data'].'>';
+		
+				get_component([
+							'template' => 'organism/'.$section_file,
+							'vars' => $value
+				]);
 
-				}
-		echo '</section>';
+					}
+			echo '</section>';
 
-		unset($section_file);
-	}
-} else {
-
-
-
-
-
-	if(is_realy_woocommerce_page ()) {
-		get_component([
-						'template' => 'template/simple-page',
-						'vars' => []
-			]);
+			unset($section_file);
+		}
 	} else {
-	get_component([
-						'template' => 'template/no-section-warning',
-						'vars' => []
-			]);
+
+
+
+
+
+		if(is_realy_woocommerce_page ()) {
+			get_component([
+							'template' => 'template/simple-page',
+							'vars' => []
+				]);
+		} else {
+		get_component([
+							'template' => 'template/no-section-warning',
+							'vars' => []
+				]);
+		}
 	}
+}else{
+ get_component([
+							'template' => 'template/simple-page',
+							'vars' => []
+				]);
 }
  ?>
 

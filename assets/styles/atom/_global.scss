@@ -181,3 +181,12 @@ section {
 		li{color:$grey-dark !important;}
 	}
 }
+
+form.post-password-form{
+	text-align:center;
+	input[type="submit"]{
+		@extend .btn;
+		font-size: 1em;
+		vertical-align: baseline;
+	}
+}
