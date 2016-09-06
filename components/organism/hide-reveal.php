@@ -36,7 +36,6 @@
 
 
       <?php 
-      //debug($vars['tabs'][$i]['card']);
       get_component([ 'template' => 'molecule/card',
                             'remove_tags'=>$vars['tabs'][$i]['card']['remove_elements'],
                             'vars' => [
@@ -46,7 +45,7 @@
                                   "title" => $vars['tabs'][$i]['card']['title'],
                                   "subtitle" => $vars['tabs'][$i]['card']['subtitle'],
                                   "content" => $vars['tabs'][$i]['card']['content'],
-                                  "button" => $vars['tabs'][$i]['card']['button'],
+                                  "button" => $vars['tabs'][$i]['card']['button_list']['button'],
                                      
                                   ]
                              ]); ?>

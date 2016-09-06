@@ -61,7 +61,7 @@ if ( $query->have_posts() ) {
             'title' => get_the_title(),
             'id'=> $the_post->ID,
             'slug'=> $the_post->post_name,
-            'content'=> $the_post->post_content,
+            'content'=> truncate( $the_post->post_content,25,'',false),
             'logo'=> get_field('logo'),
             'register_link'=> get_field('register_link'),
             'permalink'=> get_permalink(),

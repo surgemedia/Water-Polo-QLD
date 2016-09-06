@@ -59,7 +59,7 @@ function renderCalendar(render,event_list){
   width: 100%;
   height: 400px;
   border: #ccc solid 1px;
-  margin: 20px 0;
+  margin: 0px 0;
 }
 
 /* fixes potential theme css conflict */

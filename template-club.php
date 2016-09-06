@@ -54,7 +54,8 @@
 				<a className="btn text-uppercase btn text-uppercase" href="{this.props.clublink}"> About the club </a>
 				
 				</div>
-	</article>;
+				</div>
+	</article>
 	  }
 	});
 <?php 
@@ -70,7 +71,7 @@ function url_get_contents ($Url) {
     return $output;
 }
 
-$clubWebsite = 'http://dev-play-water-polo.pantheonsite.io/wp-json/rest/clubs/';
+$clubWebsite = 'http://live-play-water-polo.pantheonsite.io/wp-json/rest/clubs/';
 ?>
 
 
