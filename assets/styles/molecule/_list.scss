@@ -1,0 +1,13 @@
+.list {
+	&.no-points {
+		ul {
+		list-style: none;
+		padding:0px;
+		}
+	}
+	&.point {
+			ul {
+		list-style:circle;
+		}
+	}
+}
