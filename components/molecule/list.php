@@ -1,9 +1,10 @@
-<?php //debug('List: Element coming soon.'); ?> 
  
 <?php //debug($vars) ?>
-<div class="<?php echo $vars['class'] ?> list molecule"> 
+<div class="<?php echo $vars['class'] ?> <?php echo $vars['list_style']; ?> list molecule"> 
 <h6><?php if($vars['subtitle']){ echo $vars['subtitle']; } ?></h6> 
-<h1><?php if($vars['title']){ echo $vars['title']; } ?></h1> 
+<?php if($vars['title']){ ?>
+<h1> <?php echo $vars['title'];  ?></h1> 
+<?php } ?>
 <?php if(isset($vars["content"]) && strlen($vars["content"]) > 0) { ?>
 	<?php echo apply_filters('the_content',  $vars["content"]); ?>
 		<?php } ?>
