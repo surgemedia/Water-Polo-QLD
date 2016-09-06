@@ -24,3 +24,48 @@
 		}
 	}
 }
+.media-block {
+  display: block;
+  flex-wrap: none;
+  background:#fff;
+  .col-md-3 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-block;
+    flex: none;
+    * {
+      // display:block;
+    }
+  }
+}
+#posts .card {
+    flex-grow:4;
+    flex:1;
+    flex-basis: 50%;
+}
+.homepage-heading {
+  max-height:none;
+  .owl-item {
+      .slide {
+        height:70vh;
+        img {
+          width:100%;
+        }
+        .card {
+          height: 60%;
+          position: absolute;
+          right: 0;
+          overflow: hidden;
+          text-align: center;
+          z-index: 9;
+          font-size: 0.7em;
+          width:100%;
+        }
+      } 
+    }
+    .owl-dots {
+      width: 100%;
+    }
+}

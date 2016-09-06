@@ -26,7 +26,7 @@
             get_component([ 'template' => 'molecule/card-product',
                             'remove_tags'=>['h6'],
                             'vars' => [
-                                  "class" => 'col-md-6 product padding-4-top padding-4-bottom '.get_field('product_color'),
+                                  "class" => 'col-md-6 col-xs- 12 product padding-4-top padding-4-bottom '.get_field('product_color'),
                                   "title" => get_the_title(),
                                   "image" => getFeaturedUrl(),
                                   "content" => get_the_content(),

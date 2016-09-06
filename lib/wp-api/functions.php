@@ -1,14 +1,14 @@
 <?php 
-function register_post_custom_field() {
-        register_api_field( 'post',
-            'custom_field',
-            array(
-                'get_callback'    => 'get_custom_field',
-                'update_callback' => null,
-                'schema'          => null,
-            )
-        );
-    }
-
-
-     ?>
+function theme_endpoints() {
+    register_rest_route( 'rest/', '/clubs', array(
+        'methods' => 'GET',
+        'callback' => 'all_club_endpoint',
+    ) );
+    register_rest_route( 'rest/', '/club/(?P<name>[a-z0-9\-]+)', array(
+        'methods' => 'GET',
+        'callback' => 'club_endpoint',
+    ) );
+  
+} 
+add_action( 'rest_api_init', 'theme_endpoints');
+ ?>

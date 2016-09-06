@@ -2,10 +2,10 @@
 
 <div class="molecule social-feeds">
  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active col-md-6">
+    <li role="presentation" class="active col-md-6 col-xs-6">
     			<a href="#facebook" aria-controls="facebook" role="tab" data-toggle="tab"><i class="icon-facebook"></i></a>
     			</li>
-    <li role="presentation" class="col-md-6 twitter" ><a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab"><i class="icon-twitter"></i></a></li>
+    <li role="presentation" class="col-md-6 col-xs-6 twitter" ><a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab"><i class="icon-twitter"></i></a></li>
   </ul>
 	
   <!-- Tab panes -->

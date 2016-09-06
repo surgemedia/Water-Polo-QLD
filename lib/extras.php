@@ -70,7 +70,7 @@ function pagination_bar() {
   $cpt_enabled = [
             'events' => true,
             'testimonials' => false,
-            'representative_teams' => true,
+            'representative_teams' => false,
             'clubs' => true,
             'galleries' => true,
 
@@ -86,6 +86,10 @@ $custom_includes = [
   'lib/nav-walker.php',    // Scripts and stylesheets
   'lib/acf-option-page.php', //ACF Option Page
   'lib/gravity_forms-v5.php',
+  'lib/wp-api/functions.php',    // Scripts and stylesheets
+  'lib/wp-api/clubs.php',    // Scripts and stylesheets
+
+
 
   /* Post Types */
   //'lib/post_type_foodstorm.php',
@@ -117,7 +121,7 @@ foreach ($custom_includes as $file) {
 }
 unset($file, $filepath);
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
+// add_action( 'after_setup_theme', 'woocommerce_support' );
+// function woocommerce_support() {
+//     add_theme_support( 'woocommerce' );
+// }

@@ -42,15 +42,16 @@ $custom_includes = [
   'lib/nav-walker.php',    // Scripts and stylesheets
   'lib/acf-option-page.php', //ACF Option Page
   'lib/gravity_forms-v5.php',
+  'lib/wp-api/clubs.php',    // Scripts and stylesheets
 
   /* Post Types */
   //'lib/post_type_foodstorm.php',   
   //'lib/post_type_testimonial.php',  
-
+afd->saf
   /* Functions */
   'lib/function-debug.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
-  'lib/function-get_component.php',    // Scripts and stylesheets
+  'lib/functionasd -get_component.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
   'lib/function-truncate-content.php',    // Scripts and stylesheets
@@ -59,6 +60,7 @@ $custom_includes = [
   'lib/class-layoutbuilder.php',    // Create Custom Post Types
   'lib/create-home-page.php',    // Create Custom Post Types
   'lib/function-get_section_options.php',    // Scripts and stylesheets
+
 ];
 
 foreach ($custom_includes as $file) {
@@ -70,6 +72,8 @@ foreach ($custom_includes as $file) {
 }
 unset($file, $filepath);
 
+//The Following registers an api route with multiple parameters. 
+ 
 
 
 

@@ -9,7 +9,7 @@
 			get_component([ 'template' => 'molecule/card-img-side',
 							'remove_tags' =>  $vars['remove_elements'],
 											'vars' => [
-														"class" => 'col-md-6 card para',
+														"class" => 'col-md-6  card para',
 														"title" => $vars["title"],
 														"subtitle" => $vars["subtitle"],
 														"content" => apply_filters('the_content',  $vars["content"]),

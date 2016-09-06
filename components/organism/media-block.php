@@ -21,7 +21,7 @@
 
 
 	?>
-	<div class="col-md-3">
+	<div class="col-md-3 col-xs-12">
 
 		<?php
 	//Element 3
@@ -45,7 +45,7 @@
 			]);
 		?>
 		</div>
-	<div class="col-md-3">
+	<div class="col-md-3 col-xs-12">
 	<?php
 	//Element 1
 	get_component([
@@ -56,7 +56,7 @@
 			]);
 	?>
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-3 col-xs-12">
 
 	<?php
 	//Element 2
@@ -69,7 +69,7 @@
 		</div>
 
 
-	<div class="col-md-3">
+	<div class="col-md-3 col-xs-12">
 	<?php
 	//Element 4
 		get_component([
