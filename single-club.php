@@ -1,3 +1,4 @@
+<?php if ( ! post_password_required() ) { ?>
 <section class="page-heading club <?php echo $vars['class'] ?>" style="background-image:url(<?php echo get_field('additional_image'); ?>)">
 
 <div class="text-center container padding-4-bottom padding-4-top">
@@ -88,7 +89,12 @@ if( !empty($location) ):
 	<?php endif; ?>
  </div>
 </section>
-
+<?php }else{
+ get_component([
+							'template' => 'template/simple-page',
+							'vars' => []
+				]);
+} ?>
       
 <?php 
 

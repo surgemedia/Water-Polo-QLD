@@ -3,6 +3,7 @@
  * Template Name: No Page Heading
  */
 ?>
+<?php if ( ! post_password_required() ) { ?>
 <div class="">
 <?php
 $layout_builder = get_field('layout');
@@ -42,7 +43,14 @@ foreach ($layout_builder as $key => $value) {
 }
  ?>
 </div>
-
+<?php 
+	}else{
+	 get_component([
+								'template' => 'template/simple-page',
+								'vars' => []
+					]);
+	}
+ ?>     
 <?php 
 
 	$vars['front_page'] = get_option('page_on_front');

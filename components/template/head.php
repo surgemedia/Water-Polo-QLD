@@ -6,7 +6,7 @@
   <meta property="og:site_name"                content="<?php get_bloginfo('name'); ?>" />
   <meta property="og:type"               content="website" />
   <meta property="og:title"              content="<?php the_title() ?>" />
-  <meta property="og:description"        content="<?php the_content() ?>" />
+  <meta property="og:description"        content="<?php //the_content() ?>" />
   <meta property="og:image"              content="<?php echo getFeaturedUrl(); ?>" />
   <meta name="pingdom-string" value="<?php echo get_field('pingdom_string','option'); ?>">
   <meta name="google-site-verification" content="<?php echo get_field('google_webmaster','option'); ?>" />
