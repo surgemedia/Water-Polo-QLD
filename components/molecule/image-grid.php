@@ -3,11 +3,11 @@
  <?php
         foreach ($vars['image_list'] as $item) {?>
                   <?php
-                  // debug($vars);
+                   //debug($vars);
               get_component([ 'template' => 'molecule/card',
                             'remove_tags'=> $item['remove_elements'],
                             'vars' => [
-                                  "class" => 'card '.get_field('product_color').' col-md-'.$vars['column_number'],
+                                  "class" => $item['class'].' '.$item['background_color'].' col-md-'.$vars['column_number'],
                                   "title" =>  $item['title'],
                                   "subtitle" =>  $item['subtitle'],
                                   "image" =>  $item['image'],
