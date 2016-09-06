@@ -157,7 +157,12 @@ button.navbar-toggle {
       }
     }
   }
-} 
+}
+#posts .card {
+    flex-grow:4;
+    flex:1;
+    flex-basis: 100%;
+}
 .angled-card {
   .card {
   &:after {
@@ -195,4 +200,8 @@ button.navbar-toggle {
     .owl-dots {
       width: 100%;
     }
+}
+.navbar-nav .open .dropdown-menu>li>a {
+  line-height: 20px;
+    padding: 2em;
 }

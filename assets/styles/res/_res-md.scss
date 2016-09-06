@@ -93,3 +93,8 @@
 ._2p3a {
   width:100% !important;
 }
+#posts .card {
+    flex-grow:4;
+    flex:1;
+    flex-basis: 50%;
+}
