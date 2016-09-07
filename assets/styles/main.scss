@@ -91,9 +91,7 @@
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 	@import "res/_res-sm.scss";
 }
-// @media (min-width: $screen-md-min) and (max-width: $screen-md-max)  {
-// 	@import "res/_res-md-lg.scss";
-// }
+
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 	@import "res/_res-md.scss";
 }

@@ -16,7 +16,9 @@
         overflow: hidden;
        }
        article {
-      
+        h1 {
+           font-size: 5vw;
+        }
         &:before {
           left:0px;
           z-index:-1;

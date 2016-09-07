@@ -98,3 +98,18 @@
     flex:1;
     flex-basis: 50%;
 }
+
+.homepage-heading {
+  .owl-item {
+      .slide {
+        img {
+        }
+        .card {
+
+          font-size:0.9em;
+        }
+      } 
+    }
+    .owl-dots {
+    }
+}

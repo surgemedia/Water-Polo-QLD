@@ -1,6 +1,11 @@
-.h1{
-  font-size: 5em;
-}
+.events h1,
+h1 { font-size:3.5em; padding:0.5em}
+h2 { font-size:2em}
+h3 { font-size:1.8em}
+h4 { font-size:1.8em}
+.one-column#shop-banner { background-position:60% 100%; }
+ .one-column#shop-banner .card .btn {  margin-left:1em; }
+.h1{ font-size: 5em; }
 .banner {
   a.brand {
     display:none;
@@ -12,7 +17,7 @@
     top: auto;
     left: auto;
     clear: both;
-    width: 33%;
+    width: 25%;
     padding: 2em;
     img {
     height: auto;
@@ -72,15 +77,30 @@ button.navbar-toggle {
 .shop-links {
   list-style:none;
     position: absolute;
-    top: 0px;
+    top: 14vh;
     right: 0px;
     visibility: visible;
-    width: 67%;
+    width: 100%;
     margin: 0px;
     background: #fff;
     padding: 0px;
     text-align: center;
+    .red-dark-bg {
+      background-color:$red;
+    }
 }
+div#logowrapper-mobile {
+    width: 100%;
+    text-align: center;
+    background:$red-dark;
+}
+
+div#logowrapper-mobile img {
+    width: 67%;
+    padding: 1em;
+    height:auto !important;
+}
+
 
 .shop-links li {
     float: right;
@@ -213,6 +233,7 @@ button.navbar-toggle {
     }
     .owl-dots {
       width: 100%;
+      display: none;
     }
 }
 .navbar-nav .open .dropdown-menu>li>a {
@@ -223,3 +244,53 @@ button.navbar-toggle {
 .woocommerce ul.products .product.type-product {
   width: 100%;
 }
+
+.molecule.events {
+  padding-bottom:5em;
+}
+  .event-list a {
+    padding:1em;
+  }
+
+.page-heading .heading-gap-top {
+  top:150px;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  #logowrapper {
+       text-align: left;
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    clear: both;
+    width: 25%;
+    padding: 2em;
+    img {
+    height: auto;
+    width: 100%;
+
+    }
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  #logowrapper {
+       text-align: left;
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    clear: both;
+    width: 25%;
+    padding: 2em;
+    img {
+    height: auto;
+    width: 100%;
+
+    }
+  }
+}
+

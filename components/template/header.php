@@ -1,5 +1,18 @@
 <header class="banner hide-print">
-  <div id="logowrapper" class="col-md-1 col-xs-12 text-center red-dark-bg padding-4">
+<div id="logowrapper-mobile" class="hidden-lg hidden-md hidden-sm   show-xs">
+ <?php
+      get_component([
+              'template' => 'atom/brand',
+              'vars' => [
+                          'logo' => get_field('logo_long','option'),
+                          'width' => 'auto',
+                          'height' => '70px',
+                          'id' => "footer_logo"
+                        ]
+        ]);
+      ?>
+</div>
+  <div id="logowrapper" class="col-md-1 col-xs-12 hidden-xs text-center red-dark-bg padding-4">
     <?php
       get_component([
               'template' => 'atom/brand',

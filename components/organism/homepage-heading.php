@@ -7,7 +7,7 @@
        <?php  get_component([ 'template' => 'molecule/card-homepage',
                          'remove_tags' =>  $value['remove_elements'],
                          'vars' => [
-                               "class" => 'card col-sm-4 pull-right pattern-bg '.$value['background_color'] ,
+                               "class" => 'card col-lg-4 col-md-4 col-sm-6 pull-right pattern-bg '.$value['background_color'] ,
                                "title" => $value['title'],
                                "subtitle" => $value["subtitle"],
                                 "image" => $value["image"],
