@@ -62,25 +62,25 @@
  ?>      
 <?php 
 
-	$vars['front_page'] = get_option('page_on_front');
-	$vars['builder'] = get_field('layout',$vars['front_page']);
-	foreach ($vars['builder'] as $key => $layout) {
+	// $vars['front_page'] = get_option('page_on_front');
+	// $vars['builder'] = get_field('layout',$vars['front_page']);
+	// foreach ($vars['builder'] as $key => $layout) {
 
-		if($layout['acf_fc_layout'] == 'contact'){					
-			//Section Options
-			$layout["section"] = $layout['acf_fc_layout'];
-			$layout['section_data'] = get_section_options($layout);
+	// 	if($layout['acf_fc_layout'] == 'contact'){					
+	// 		//Section Options
+	// 		$layout["section"] = $layout['acf_fc_layout'];
+	// 		$layout['section_data'] = get_section_options($layout);
 
-			//Call file for display
-			echo '<section '.$layout['section_data'].'>';
-					get_component([
-								'template' => 'organism/contact',
-								'vars' => $layout
-					]);
+	// 		//Call file for display
+	// 		echo '<section '.$layout['section_data'].'>';
+	// 				get_component([
+	// 							'template' => 'organism/contact',
+	// 							'vars' => $layout
+	// 				]);
 						
-			echo '</section>';
+	// 		echo '</section>';
 			
-		}
-	} 
+	// 	}
+	// } 
 
 ?>

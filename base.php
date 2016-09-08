@@ -34,6 +34,9 @@ use Roots\Sage\Wrapper;
       do_action('get_footer');
       get_template_part('components/template/footer');
       wp_footer();
+
     ?>
+    <script src="http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js"></script>
+<?php get_component([ 'template' => 'atom/footer-scripts' ]); ?>
   </body>
 </html>

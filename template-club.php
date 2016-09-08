@@ -26,7 +26,7 @@
 											 ]);
 	unset($heading_gap);
  ?>
-<section class="club">
+<section id="react-clubs" class="club grey-light-bg">
     <div id="clubs">
     </div>
 </section>

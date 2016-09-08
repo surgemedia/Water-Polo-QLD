@@ -5,7 +5,9 @@ $result = $data['name'];
         // WP_Query arguments
 $args = array (
     'name'                    => $data['name'],
-    'post_type'               => array('club')
+    'post_type'               => array('club'),
+    'per_page' => 50,
+    'post_status' => 'publish'
 );
 // The Query
 $query = new WP_Query( $args );

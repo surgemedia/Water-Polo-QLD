@@ -8,6 +8,8 @@ body {
     background-repeat: no-repeat;
     font-weight: 100;
     color: #000;
+    opacity: 1 !important;
+    transition: all .5s ease;
 }
 main {
 	width:100%;
@@ -189,4 +191,8 @@ form.post-password-form{
 		font-size: 1em;
 		vertical-align: baseline;
 	}
+}
+.container-fluid:after,
+.container-fluid:before {
+	display:initial;
 }
