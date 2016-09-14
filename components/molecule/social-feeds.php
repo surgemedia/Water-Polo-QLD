@@ -12,7 +12,7 @@
   <div class="tab-content">
     
 	    <div role="tabpanel" class="tab-panel active" id="facebook">
-			<?php echo $vars['facebook']; ?>
+			<?php echo do_shortcode('[custom-facebook-feed]'); ?>
 	    </div>
 	    <div role="tabpanel" class="tab-panel" id="twitter">
 			<?php echo $vars['twitter']; ?>

@@ -1,5 +1,6 @@
 <header class="banner hide-print">
 <div id="logowrapper-mobile" class="hidden-lg hidden-md hidden-sm   show-xs">
+<a href="<?php echo get_site_url(); ?>">
  <?php
       get_component([
               'template' => 'atom/brand',
@@ -11,8 +12,10 @@
                         ]
         ]);
       ?>
+      </a>
 </div>
   <div id="logowrapper" class="col-md-1 col-xs-12 hidden-xs text-center red-dark-bg padding-4">
+    <a href="<?php echo get_site_url(); ?>">
     <?php
       get_component([
               'template' => 'atom/brand',
@@ -25,6 +28,7 @@
                         ]
         ]);
       ?>
+      </a>
       </div>
    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>

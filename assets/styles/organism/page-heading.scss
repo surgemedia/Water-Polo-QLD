@@ -8,9 +8,10 @@
   }
   .white-bg {
   text-align: center;
+  background-color:rgba(#fff,0.9);
     h1 {
       margin-top: 0px;
-      margin-bottom: 0.8em;
+      margin-bottom: 0.9em;
     }
     li {
       @extend .p1; 

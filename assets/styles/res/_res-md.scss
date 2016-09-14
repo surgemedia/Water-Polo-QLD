@@ -77,6 +77,7 @@
   display: block;
   flex-wrap: wrap;
   background:#fff;
+  [class*='col-'],
   .col-md-3 {
     margin-left: 0;
     margin-right: 0;
@@ -89,6 +90,12 @@
     }
   }
 }
+.social-feeds div.tab-content {
+    max-height: 325px;
+    overflow: hidden;
+}
+
+
 
 ._2p3a {
   width:100% !important;
@@ -113,3 +120,20 @@
     .owl-dots {
     }
 }
+section#shop-banner {
+  position:relative;
+}
+section#shop-banner:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    left: 0;
+    background: #fff;
+    opacity: 0.5;
+  }
+
+  .event-list a {
+    bottom:-35px;
+  }

@@ -2,6 +2,19 @@
 width:100%;
  background:#fff;
 
+.cff-wrapper {
+    padding: 2em;
+    max-height: 400px;
+    overflow: scroll;
+}
+
+
+#cff .cff-item p {
+    color: $color6;
+    text-align: left;
+}
+
+
 
   ul.nav {
 			border:0px;
@@ -17,6 +30,7 @@ width:100%;
 					color:#fff;
 					background:#3b5998;
 					border:0px;
+					width:100%;
 					&:hover {
 								background:#fff;
 								color:#3b5998;
@@ -36,6 +50,8 @@ width:100%;
 
   div.tab-content {
   	background:#fff;
+  	max-height: 400px;
+  	overflow: hidden;
   		#facebook {
   		._2p3a {
     		width: 100% !important

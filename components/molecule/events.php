@@ -4,7 +4,7 @@
 	<hgroup>
 		<h1><?php echo $vars["title"]?></h1>
 
-		<h6><?php echo date("F j Y", strtotime($vars["start_datetime"])); ?></h6>
+		<h6><?php echo date("j F Y", strtotime($vars["start_datetime"])); ?></h6>
 	</hgroup>
 		<?php 
 		get_component([

@@ -197,7 +197,8 @@ button.navbar-toggle {
 }
 
 #posts .card {
-    flex-grow:4;
-    flex:1;
-    flex-basis: 50%;
+    flex-grow:intial;
+    display: block;
+    flex:intial;
+    flex-basis: intial;
 }

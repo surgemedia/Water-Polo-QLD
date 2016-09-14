@@ -81,7 +81,7 @@ var data = <?php echo file_get_contents($clubWebsite); ?>;
 	  render: function() {
 	  	var rows = [];
 			for (var i=0; i < this.props.clublist.length; i++) {
-					var main_classes = "col-md-6 card club padding-4-top padding-4-bottom molecule  "+this.props.clublist[i].color;
+					var main_classes = "col-lg-6 col-md-12 card club padding-4-top padding-4-bottom molecule  "+this.props.clublist[i].color;
 					var clubLink = '<?php echo $clubWebsite; ?>'+this.props.slug;
 			    rows.push(<ClubCard logo={this.props.clublist[i].logo} title={this.props.clublist[i].title} content={this.props.clublist[i].content} clublink={clubLink} coreclass={main_classes}></ClubCard>);
 			}

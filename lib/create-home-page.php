@@ -18,19 +18,17 @@ if (is_admin()){
 	    'post_content' => $home_page_content,
 	    'post_status' => 'publish',
 	    'post_author' => 1,
-	    'ID' => 2,
+	    'ID' => 666,
 	    'post_slug' => 'home'
     );
     if(!isset($home_page_check->ID) && !the_slug_exists('home')){
         $home_page_id = wp_insert_post($home_page);
+        $front_page = 666; // this is the default page created by WordPress
+				update_option( 'page_on_front', $front_page );
+				update_option( 'show_on_front', 'page' );
     }
 }
-if (is_admin()){
-	// Use a static front page
-	// $front_page = 2; // this is the default page created by WordPress
-	// update_option( 'page_on_front', $front_page );
-	// update_option( 'show_on_front', 'page' );
-}
+
 
 
  ?>

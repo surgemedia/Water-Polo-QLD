@@ -128,6 +128,7 @@ $('.owl-carousel').owlCarousel({
       loop:true,
       margin:10,
       nav:false,
+      autoplay:true,
       autoHeight:true,
       responsive:{
           0:{
